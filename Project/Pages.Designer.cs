@@ -33,17 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseNameNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.termOrSemesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionViolationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyMemberNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -109,7 +99,6 @@
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.richTextBox12 = new System.Windows.Forms.RichTextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.label24 = new System.Windows.Forms.Label();
             this.richTextBox14 = new System.Windows.Forms.RichTextBox();
@@ -131,10 +120,19 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseNameNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termOrSemesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionViolationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyMemberNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -155,6 +153,7 @@
             this.flowLayoutPanel11.SuspendLayout();
             this.flowLayoutPanel10.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -204,68 +203,10 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "Student_Name";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student_Name";
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            // 
-            // studentNumberDataGridViewTextBoxColumn
-            // 
-            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "Student_Number";
-            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student_Number";
-            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
-            // 
-            // studentEmailDataGridViewTextBoxColumn
-            // 
-            this.studentEmailDataGridViewTextBoxColumn.DataPropertyName = "Student_Email";
-            this.studentEmailDataGridViewTextBoxColumn.HeaderText = "Student_Email";
-            this.studentEmailDataGridViewTextBoxColumn.Name = "studentEmailDataGridViewTextBoxColumn";
-            // 
-            // courseNameNumberDataGridViewTextBoxColumn
-            // 
-            this.courseNameNumberDataGridViewTextBoxColumn.DataPropertyName = "Course_Name_Number";
-            this.courseNameNumberDataGridViewTextBoxColumn.HeaderText = "Course_Name_Number";
-            this.courseNameNumberDataGridViewTextBoxColumn.Name = "courseNameNumberDataGridViewTextBoxColumn";
-            // 
-            // departmentDataGridViewTextBoxColumn
-            // 
-            this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
-            this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
-            this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
-            // 
-            // termOrSemesterDataGridViewTextBoxColumn
-            // 
-            this.termOrSemesterDataGridViewTextBoxColumn.DataPropertyName = "Term_Or_Semester";
-            this.termOrSemesterDataGridViewTextBoxColumn.HeaderText = "Term_Or_Semester";
-            this.termOrSemesterDataGridViewTextBoxColumn.Name = "termOrSemesterDataGridViewTextBoxColumn";
-            // 
-            // descriptionViolationDataGridViewTextBoxColumn
-            // 
-            this.descriptionViolationDataGridViewTextBoxColumn.DataPropertyName = "Description_Violation";
-            this.descriptionViolationDataGridViewTextBoxColumn.HeaderText = "Description_Violation";
-            this.descriptionViolationDataGridViewTextBoxColumn.Name = "descriptionViolationDataGridViewTextBoxColumn";
-            // 
-            // facultyMemberNameDataGridViewTextBoxColumn
-            // 
-            this.facultyMemberNameDataGridViewTextBoxColumn.DataPropertyName = "Faculty_Member_Name";
-            this.facultyMemberNameDataGridViewTextBoxColumn.HeaderText = "Faculty_Member_Name";
-            this.facultyMemberNameDataGridViewTextBoxColumn.Name = "facultyMemberNameDataGridViewTextBoxColumn";
-            // 
             // Delete
             // 
             this.Delete.HeaderText = "Delete";
             this.Delete.Name = "Delete";
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(Project.Student);
             // 
             // tabPage2
             // 
@@ -430,7 +371,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(21, 32714);
+            this.listBox1.Location = new System.Drawing.Point(0, 100);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(1141, 69);
             this.listBox1.TabIndex = 0;
@@ -441,7 +382,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 32764);
+            this.label2.Location = new System.Drawing.Point(20, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 12);
             this.label2.TabIndex = 1;
@@ -452,7 +393,7 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(22, 32714);
+            this.richTextBox1.Location = new System.Drawing.Point(26, 31);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(1136, 51);
             this.richTextBox1.TabIndex = 2;
@@ -462,7 +403,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 32764);
+            this.label3.Location = new System.Drawing.Point(213, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 13);
             this.label3.TabIndex = 3;
@@ -472,7 +413,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 32764);
+            this.label4.Location = new System.Drawing.Point(327, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(722, 46);
             this.label4.TabIndex = 4;
@@ -481,7 +422,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(746, 32714);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 198);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(206, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -491,7 +432,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 32764);
+            this.label5.Location = new System.Drawing.Point(45, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(1123, 13);
             this.label5.TabIndex = 6;
@@ -502,7 +443,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(955, 32764);
+            this.label6.Location = new System.Drawing.Point(615, 135);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 7;
@@ -513,7 +454,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(955, 32764);
+            this.label7.Location = new System.Drawing.Point(382, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 8;
@@ -524,7 +465,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(955, 32764);
+            this.label8.Location = new System.Drawing.Point(697, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 16);
             this.label8.TabIndex = 9;
@@ -535,7 +476,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(955, 32764);
+            this.label9.Location = new System.Drawing.Point(35, 146);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 16);
             this.label9.TabIndex = 10;
@@ -547,7 +488,7 @@
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.ForeColor = System.Drawing.Color.White;
-            this.richTextBox3.Location = new System.Drawing.Point(38, 32714);
+            this.richTextBox3.Location = new System.Drawing.Point(38, 355);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox3.Size = new System.Drawing.Size(1117, 75);
@@ -560,7 +501,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.InfoText;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(951, 32714);
+            this.textBox1.Location = new System.Drawing.Point(0, 30473);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1, 81);
@@ -571,7 +512,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label10.Location = new System.Drawing.Point(29, 32764);
+            this.label10.Location = new System.Drawing.Point(0, 100);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(154, 31);
             this.label10.TabIndex = 14;
@@ -582,7 +523,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label11.Location = new System.Drawing.Point(175, 32764);
+            this.label11.Location = new System.Drawing.Point(0, 100);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(251, 31);
             this.label11.TabIndex = 15;
@@ -594,7 +535,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.label12.Location = new System.Drawing.Point(419, 32764);
+            this.label12.Location = new System.Drawing.Point(119, 304);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(222, 31);
             this.label12.TabIndex = 16;
@@ -606,7 +547,7 @@
             this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(38, 32714);
+            this.richTextBox4.Location = new System.Drawing.Point(10, 527);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ReadOnly = true;
             this.richTextBox4.Size = new System.Drawing.Size(1114, 215);
@@ -618,7 +559,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.label13.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(47, 32764);
+            this.label13.Location = new System.Drawing.Point(18, 548);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(136, 20);
             this.label13.TabIndex = 18;
@@ -630,7 +571,7 @@
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.label14.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(361, 32764);
+            this.label14.Location = new System.Drawing.Point(200, 144);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(51, 18);
@@ -642,7 +583,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(82, 32714);
+            this.pictureBox2.Location = new System.Drawing.Point(306, 114);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(72, 72);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -656,14 +597,14 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.80132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.19868F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 487F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 489F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel6, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 32714);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 618);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.04459F));
@@ -678,7 +619,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(428, 68);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(427, 68);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // Student_Name
@@ -706,9 +647,9 @@
             this.flowLayoutPanel2.Controls.Add(this.label16);
             this.flowLayoutPanel2.Controls.Add(this.Student_Number);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(439, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(438, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(182, 68);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(181, 68);
             this.flowLayoutPanel2.TabIndex = 23;
             // 
             // Student_Number
@@ -736,7 +677,7 @@
             this.flowLayoutPanel3.Controls.Add(this.label17);
             this.flowLayoutPanel3.Controls.Add(this.Student_Email);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(628, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(626, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(396, 68);
             this.flowLayoutPanel3.TabIndex = 24;
@@ -768,7 +709,7 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(4, 81);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(428, 68);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(427, 68);
             this.flowLayoutPanel4.TabIndex = 23;
             // 
             // Faculty_Member_Name
@@ -796,7 +737,7 @@
             this.flowLayoutPanel6.Controls.Add(this.label20);
             this.flowLayoutPanel6.Controls.Add(this.richTextBox10);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(628, 81);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(626, 81);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(396, 68);
             this.flowLayoutPanel6.TabIndex = 23;
@@ -826,9 +767,9 @@
             this.flowLayoutPanel5.Controls.Add(this.label19);
             this.flowLayoutPanel5.Controls.Add(this.richTextBox9);
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(439, 81);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(438, 81);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(182, 68);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(181, 68);
             this.flowLayoutPanel5.TabIndex = 23;
             // 
             // richTextBox9
@@ -858,11 +799,11 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.86636F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.13364F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 309F));
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel7, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(38, 32714);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(48, 340);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -877,7 +818,7 @@
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(290, 67);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(289, 67);
             this.flowLayoutPanel7.TabIndex = 24;
             // 
             // richTextBox11
@@ -905,9 +846,9 @@
             this.flowLayoutPanel8.Controls.Add(this.label22);
             this.flowLayoutPanel8.Controls.Add(this.richTextBox13);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(301, 4);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(300, 4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(500, 67);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(499, 67);
             this.flowLayoutPanel8.TabIndex = 25;
             // 
             // richTextBox13
@@ -935,7 +876,7 @@
             this.flowLayoutPanel9.Controls.Add(this.label23);
             this.flowLayoutPanel9.Controls.Add(this.richTextBox12);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(808, 4);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(806, 4);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(216, 67);
             this.flowLayoutPanel9.TabIndex = 26;
@@ -960,18 +901,10 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Term or Semester";
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(21, 32714);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(1141, 355);
-            this.listBox2.TabIndex = 23;
-            // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(38, 32714);
+            this.listBox3.Location = new System.Drawing.Point(6, 656);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(1114, 160);
             this.listBox3.TabIndex = 24;
@@ -982,7 +915,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(40, 32764);
+            this.label24.Location = new System.Drawing.Point(424, 277);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(762, 40);
             this.label24.TabIndex = 25;
@@ -993,7 +926,7 @@
             // 
             this.richTextBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox14.Location = new System.Drawing.Point(63, 32714);
+            this.richTextBox14.Location = new System.Drawing.Point(76, 192);
             this.richTextBox14.Name = "richTextBox14";
             this.richTextBox14.Size = new System.Drawing.Size(1109, 103);
             this.richTextBox14.TabIndex = 26;
@@ -1004,7 +937,7 @@
             this.richTextBox15.BackColor = System.Drawing.Color.WhiteSmoke;
             this.richTextBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox15.Location = new System.Drawing.Point(43, 32714);
+            this.richTextBox15.Location = new System.Drawing.Point(49, 1067);
             this.richTextBox15.Name = "richTextBox15";
             this.richTextBox15.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.richTextBox15.Size = new System.Drawing.Size(884, 395);
@@ -1016,7 +949,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(990, 32714);
+            this.button4.Location = new System.Drawing.Point(564, 114);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(45, 46);
             this.button4.TabIndex = 29;
@@ -1027,7 +960,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(990, 32714);
+            this.button5.Location = new System.Drawing.Point(437, 114);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(45, 46);
             this.button5.TabIndex = 30;
@@ -1040,11 +973,11 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.86636F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.13364F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 309F));
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel11, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel12, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(21, 32714);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 436);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1058,7 +991,7 @@
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(290, 67);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(289, 67);
             this.flowLayoutPanel12.TabIndex = 24;
             // 
             // label28
@@ -1076,9 +1009,9 @@
             this.flowLayoutPanel11.Controls.Add(this.label27);
             this.flowLayoutPanel11.Controls.Add(this.richTextBox17);
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(301, 4);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(300, 4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(500, 67);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(499, 67);
             this.flowLayoutPanel11.TabIndex = 25;
             // 
             // richTextBox17
@@ -1106,7 +1039,7 @@
             this.flowLayoutPanel10.Controls.Add(this.label26);
             this.flowLayoutPanel10.Controls.Add(this.richTextBox16);
             this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(808, 4);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(806, 4);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(216, 67);
             this.flowLayoutPanel10.TabIndex = 26;
@@ -1134,7 +1067,7 @@
             // label25
             // 
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(41, 32714);
+            this.label25.Location = new System.Drawing.Point(45, 1076);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(904, 395);
             this.label25.TabIndex = 33;
@@ -1144,7 +1077,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(536, 32764);
+            this.label29.Location = new System.Drawing.Point(868, 131);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(66, 13);
             this.label29.TabIndex = 32;
@@ -1152,7 +1085,7 @@
             // 
             // label30
             // 
-            this.label30.Location = new System.Drawing.Point(1085, 32714);
+            this.label30.Location = new System.Drawing.Point(736, 146);
             this.label30.Name = "label30";
             this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label30.Size = new System.Drawing.Size(60, 14);
@@ -1164,7 +1097,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(41, 32764);
+            this.label31.Location = new System.Drawing.Point(277, 778);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(304, 24);
             this.label31.TabIndex = 35;
@@ -1174,7 +1107,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(238, 32764);
+            this.label32.Location = new System.Drawing.Point(162, 769);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(447, 24);
             this.label32.TabIndex = 36;
@@ -1185,6 +1118,7 @@
             this.tabPage1.AllowDrop = true;
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label29);
@@ -1194,9 +1128,7 @@
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.richTextBox15);
             this.tabPage1.Controls.Add(this.richTextBox14);
-            this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.listBox3);
-            this.tabPage1.Controls.Add(this.listBox2);
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Controls.Add(this.pictureBox2);
@@ -1229,6 +1161,64 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "Student_Name";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student_Name";
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            // 
+            // studentNumberDataGridViewTextBoxColumn
+            // 
+            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "Student_Number";
+            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student_Number";
+            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
+            // 
+            // studentEmailDataGridViewTextBoxColumn
+            // 
+            this.studentEmailDataGridViewTextBoxColumn.DataPropertyName = "Student_Email";
+            this.studentEmailDataGridViewTextBoxColumn.HeaderText = "Student_Email";
+            this.studentEmailDataGridViewTextBoxColumn.Name = "studentEmailDataGridViewTextBoxColumn";
+            // 
+            // courseNameNumberDataGridViewTextBoxColumn
+            // 
+            this.courseNameNumberDataGridViewTextBoxColumn.DataPropertyName = "Course_Name_Number";
+            this.courseNameNumberDataGridViewTextBoxColumn.HeaderText = "Course_Name_Number";
+            this.courseNameNumberDataGridViewTextBoxColumn.Name = "courseNameNumberDataGridViewTextBoxColumn";
+            // 
+            // departmentDataGridViewTextBoxColumn
+            // 
+            this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
+            this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
+            this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            // 
+            // termOrSemesterDataGridViewTextBoxColumn
+            // 
+            this.termOrSemesterDataGridViewTextBoxColumn.DataPropertyName = "Term_Or_Semester";
+            this.termOrSemesterDataGridViewTextBoxColumn.HeaderText = "Term_Or_Semester";
+            this.termOrSemesterDataGridViewTextBoxColumn.Name = "termOrSemesterDataGridViewTextBoxColumn";
+            // 
+            // descriptionViolationDataGridViewTextBoxColumn
+            // 
+            this.descriptionViolationDataGridViewTextBoxColumn.DataPropertyName = "Description_Violation";
+            this.descriptionViolationDataGridViewTextBoxColumn.HeaderText = "Description_Violation";
+            this.descriptionViolationDataGridViewTextBoxColumn.Name = "descriptionViolationDataGridViewTextBoxColumn";
+            // 
+            // facultyMemberNameDataGridViewTextBoxColumn
+            // 
+            this.facultyMemberNameDataGridViewTextBoxColumn.DataPropertyName = "Faculty_Member_Name";
+            this.facultyMemberNameDataGridViewTextBoxColumn.HeaderText = "Faculty_Member_Name";
+            this.facultyMemberNameDataGridViewTextBoxColumn.Name = "facultyMemberNameDataGridViewTextBoxColumn";
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(Project.Student);
+            // 
             // Pages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1247,7 +1237,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -1282,6 +1271,7 @@
             this.flowLayoutPanel10.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1338,7 +1328,6 @@
         private System.Windows.Forms.RichTextBox richTextBox14;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label23;
