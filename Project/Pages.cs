@@ -303,5 +303,10 @@ namespace Project
                 button5.Text = "✅";
             }
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
