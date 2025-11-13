@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label25.Text" xml:space="preserve">
     <value>Recommendations for sanction.
 Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
@@ -147,7 +153,7 @@ to aic@tru.ca.</value>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAF8AAABUCAYAAADki+s2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAChpJREFUeF7tnYWzFUcWh/OfbBJcHu7uELJoQggWNHgIEhKCW4KH4BqKBHffDe4O
+        vAAADrwBlbxySQAAChpJREFUeF7tnYWzFUcWh/OfbBJcHu7uELJoQggWNHgIEhKCW4KH4BqKBHffDe4O
         CQ6Lszgs7lBwtr6uelVvu6+8O9M9c3f33qqvqPfreTzeb2Z6zpxzunkvy1/elxTh8J4upAiOlPkhkjI/
         RFLmh0jK/BBJmR8iSW9+zqzZpG6t2tKvTx9ZvHCR7Ni+XQ7s3y9HjxyR06dOybGjR9XXO3fskGVLl8qg
         /gPk03r1JFf27MbflWwknflFCxaSXj2/lflz58rxY8fk1atXcvWfV+Vv69bJiGHDpXOHjtKmZStp2qix
@@ -206,12 +212,12 @@ to aic@tru.ca.</value>
    5. Attach the form and evidence of the case to an email you will send to the student, or meet the student in person to complete the next step.</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
+    <value>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlgAAAE9CAYAAADXtxyoAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAASmhJREFUeF7t3Xv8fe9Y5/FV6ahJJ0npQMnQyCo6SDqQlUhEIZ3k0FCShGqKJJKk
+        DAAACwwBP0AiyAAASmhJREFUeF7t3Xv8fe9Y5/FV6ahJJ0npQMnQyCo6SDqQlUhEIZ3k0FCShGqKJJKk
         c4mGGhmKpBhNUhGKSUIhJDMdhGqUGiVN0zxeWcv3/r3va611r73W3p+99/3+4/n4/n73Z9332oe197r2
         fbju5l//9V8bMzMzM9tOVmBmZmZm62QFZmZmZrZOVmBmZmZm62QFZmZmZrZOVmBmZmZm62QFZmZmZrZO
         VmBmZmZm62QFZmZmZrZOVmBmZmZm62QFZmZmZrZOVmBmZmZm62QFZmZmZrZOVmBmZmZm62QFZmZmZrZO
@@ -532,18 +538,6 @@ to aic@tru.ca.</value>
         YII=
 </value>
   </data>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

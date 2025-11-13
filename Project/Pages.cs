@@ -259,5 +259,30 @@ namespace Project
             }
 
         }
+
+        private void richTextBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
