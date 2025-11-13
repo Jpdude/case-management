@@ -267,7 +267,14 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            if (button4.Text == "✅")
+            {
+                button4.Text = "";
+            }
+            else
+            {
+                button4.Text = "✅";
+            }
         }
 
         private void label29_Click(object sender, EventArgs e)
@@ -287,7 +294,14 @@ namespace Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            if (button5.Text == "✅")
+            {
+                button5.Text = "";
+            }
+            else
+            {
+                button5.Text = "✅";
+            }
         }
     }
 }
