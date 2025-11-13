@@ -136,19 +136,6 @@ at which the Case Report Form and all evidence will be reviewed by and presented
 The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
 to aic@tru.ca.</value>
   </data>
-  <data name="richTextBox15.Text" xml:space="preserve">
-    <value>Recommendations for sanction.
-Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
-remedial sanctions (such as resubmission, etc.), failure of course, and suspension. Please note that decisions 
-on cases are made by the Academic Integrity Committee. Please provide evidence on Page 4 if you are 
-recommending a specific sanction and this will be taken into consideration by the committee.
-When contacting the student to arrange a meeting to discuss this alleged violation, please ensure the student is 
-advised of the following: (please check these boxes when completed).
-The student is advised that they may bring a support person to the meeting between the student and instructor 
-at which the Case Report Form and all evidence will be reviewed by and presented to the student. 
-The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
-to aic@tru.ca.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

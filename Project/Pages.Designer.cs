@@ -59,7 +59,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.richTextBox15 = new System.Windows.Forms.RichTextBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
@@ -287,7 +286,6 @@
             this.tabPage1.Controls.Add(this.tableLayoutPanel3);
             this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.richTextBox15);
             this.tabPage1.Controls.Add(this.listBox3);
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
@@ -515,18 +513,6 @@
             this.button4.Text = "✅";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // richTextBox15
-            // 
-            this.richTextBox15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox15.Location = new System.Drawing.Point(117, 1666);
-            this.richTextBox15.Name = "richTextBox15";
-            this.richTextBox15.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox15.Size = new System.Drawing.Size(884, 395);
-            this.richTextBox15.TabIndex = 28;
-            this.richTextBox15.Text = resources.GetString("richTextBox15.Text");
             // 
             // listBox3
             // 
@@ -1331,7 +1317,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RichTextBox richTextBox15;
         private System.Windows.Forms.RichTextBox richTextBox14;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ListBox listBox3;
