@@ -1,20 +1,23 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using Newtonsoft.Json;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project
 {
     public partial class Pages : Form
     {
         public List<Student> Students { get; set; }
+        public int id;
+        String text = "";
         public Pages()
         {
             Students = GetStudents();
@@ -225,19 +228,33 @@ namespace Project
 
         }
 
-        private void inflate(string name , string info)
+        private void inflate(string name , string info , Boolean file= false)
         {
-            //Console.WriteLine("tbx: " + name+" "+info);
-            //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
-            RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
-            Console.WriteLine("tbx: "+tbx);
-            
-            //Console.WriteLine("tbx1: " + tbx1);
-            if (tbx != null)
+            if (file)
             {
-                tbx.Text = info;
-                tbx.Enabled = false;
+                RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
+                if (tbx != null)
+                {
+                    
+                    this.text += $"'{name}','{tbx.Text}',";
+                }
+                
 
+            }
+            else
+            {
+                //Console.WriteLine("tbx: " + name+" "+info);
+                //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
+                RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
+                Console.WriteLine("tbx: " + tbx);
+
+                //Console.WriteLine("tbx1: " + tbx1);
+                if (tbx != null)
+                {
+                    tbx.Text = info;
+                    tbx.Enabled = false;
+
+                }
             }
             
         }
@@ -261,6 +278,7 @@ namespace Project
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString() == rec.id)
                 {
+                    this.id = int.Parse(rec.id);
                     foreach (var attr in rec.GetType().GetProperties())
                     {
                         this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
@@ -320,6 +338,48 @@ namespace Project
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("ID" + this.id);
+            var students = this.Students;
+            var id = this.id;
+            this.text = "[";
+            StreamWriter writer = new StreamWriter("update.txt");
+
+            foreach (var rec in students)
+            {
+                if (id == int.Parse(rec.id)) // I actually dont have to make id a int, id doesnt have to be an int throught out but i feel like it's better if i follow the canonical way of initializing ids
+                {
+                    foreach (var attr in rec.GetType().GetProperties())
+                    {
+                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),true);
+                    }
+
+                }
+            }
+
+            // Huh... forgot that changes do not directly reflect the Student class
+            //foreach (var rec in students)
+            //{
+            //    if (id == int.Parse(rec.id)) // I actually dont have to make id a int, id doesnt have to be an int throught out but i feel like it's better if i follow the canonical way of initializing ids
+            //    {
+            //        foreach (var attr in rec.GetType().GetProperties())
+            //        {
+            //            text += $"'{attr.Name}','{attr.GetValue(rec, null).ToString()}'";
+            //        }
+
+            //    }
+            //}
+            this.text += "]";
+            writer.WriteLine(text);
+            writer.Close();
+            Console.WriteLine(text);
+            //String text = richTextBox2.Text;
+            //StreamWriter write = new StreamWriter("update.txt");
+            //write.WriteLine(text);
+            //write.Close();
         }
     }
 }
