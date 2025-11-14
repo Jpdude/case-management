@@ -249,9 +249,10 @@ namespace Project
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Console.WriteLine(e.ColumnIndex);
-            String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
+            
             if (e.ColumnIndex == 9)
             {
+                String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
                 Console.WriteLine("DELETE");
                 Console.WriteLine(this.run($"delete {ID}"));
 
