@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -182,13 +183,43 @@ namespace Project
 
         }
 
+        public Boolean run(String args)
+        {
+            string pythonPath = @"C:\Program Files\Python310\python";//change to python path not python file path
+            string scriptPath = "ProjectRevamp.py";
+
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = pythonPath;
+            start.Arguments = $"{scriptPath} {args} --output";
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardError = true;
+            start.CreateNoWindow = true;
+            using (Process pro = Process.Start(start))
+            {
+                string result = pro.StandardOutput.ReadToEnd();
+                string err = pro.StandardError.ReadToEnd();
+                Console.WriteLine(result);
+                Console.WriteLine(err);
+            }
+            Console.ReadKey();
+            if (result == "OK")
+            {
+                return true
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Console.WriteLine(e.ColumnIndex);
+            String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
             if (e.ColumnIndex == 9)
             {
                 Console.WriteLine("DELETE");
-                //Delete
+                this.run($"delete {ID}")
 
             }
 
@@ -380,6 +411,7 @@ namespace Project
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
+            this.run($"{type} text -i")
         }
         private void button7_Click(object sender, EventArgs e)
         {
