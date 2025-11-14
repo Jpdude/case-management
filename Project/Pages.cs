@@ -185,8 +185,8 @@ namespace Project
 
         public Boolean run(String args)
         {
-            string pythonPath = @"C:\Program Files\Python310\python";//change to python path not python file path
-            string scriptPath = "ProjectRevamp.py";
+            string pythonPath = @"C:\Users\Jp\AppData\Local\Programs\Python\Python313\python.exe";//change this l8r
+            string scriptPath = "ProjectRevamp.py"; 
 
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = pythonPath;
@@ -195,17 +195,23 @@ namespace Project
             start.RedirectStandardOutput = true;
             start.RedirectStandardError = true;
             start.CreateNoWindow = true;
+            String res;
             using (Process pro = Process.Start(start))
             {
                 string result = pro.StandardOutput.ReadToEnd();
+                Console.WriteLine("result"+ result);
+                res = result;
                 string err = pro.StandardError.ReadToEnd();
                 Console.WriteLine(result);
-                Console.WriteLine(err);
+                Console.WriteLine("errr"+err);
             }
-            Console.ReadKey();
-            if (result == "OK")
+            //Console.ReadKey();
+            Console.WriteLine("result", res);
+            if (res == "OK")
             {
-                return true
+                this.Students = GetStudents();
+                return true;
+                
             }
             else
             {
@@ -219,7 +225,7 @@ namespace Project
             if (e.ColumnIndex == 9)
             {
                 Console.WriteLine("DELETE");
-                this.run($"delete {ID}")
+                Console.WriteLine(this.run($"delete {ID}"));
 
             }
 
@@ -313,8 +319,8 @@ namespace Project
                     foreach (var attr in rec.GetType().GetProperties())
                     {
                         this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
-                        Console.WriteLine(attr.Name);
-                        Console.WriteLine(attr.GetValue(rec, null).ToString());
+                        //Console.WriteLine(attr.Name);
+                        //Console.WriteLine(attr.GetValue(rec, null).ToString());
                     }
 
                 }
@@ -411,11 +417,32 @@ namespace Project
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
-            this.run($"{type} text -i")
+            Console.WriteLine(this.run($"{type} {id} -o -i text"));
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            update("add")
+            if (groupBox1.Text == "Add")
+                this.update("add");
+
+            if (groupBox1.Text == "Edit")
+                this.update("edit");
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            var students = this.Students;
+            foreach (var rec in students)
+            {
+                    this.id = int.Parse(rec.id);
+                    foreach (var attr in rec.GetType().GetProperties())
+                    {
+                        this.inflate(attr.Name, "");
+                        //Console.WriteLine(attr.Name);
+                        //Console.WriteLine(attr.GetValue(rec, null).ToString());
+                    }
+
+            }
         }
     }
 }
