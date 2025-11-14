@@ -29,7 +29,7 @@ namespace Project
         private List<Student> GetStudents()
         {
 
-            StreamReader read = new StreamReader("data.txt");
+            StreamReader read = new StreamReader("data2.txt");//change back to data.txt
             String Textdata = read.ReadToEnd();
            
             var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
@@ -52,7 +52,32 @@ namespace Project
                     Term_Or_Semester = rec.Value.Term_Or_Semester,
                     Description_Violation = rec.Value.Description_Violation,
                     Faculty_Member_Name = rec.Value.Faculty_Member_Name,
-                    
+
+                    Step_One_Date = rec.Value.Step_One_Date,
+                    Recommendations_For_Sanction = rec.Value.Recommendations_For_Sanction,
+                    Student_Advised_1 = rec.Value.Student_Advised_1,
+                    Student_Advised_2 = rec.Value.Student_Advised_2,
+                    Student_Name_Step2 = rec.Value.Student_Name_Step2,
+                    MyTRU_Email = rec.Value.MyTRU_Email,
+                    Step2_Date = rec.Value.Step2_Date,
+                    Student_Agreement = rec.Value.Student_Agreement,
+                    Student_Comments = rec.Value.Student_Comments,
+                    Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
+                    Date_Step3 = rec.Value.Date_Step3,
+                    Department_Chair_Name = rec.Value.Department_Chair_Name,
+                    Agree_Step4 = rec.Value.Agree_Step4,
+                    Comments_Step4 = rec.Value.Comments_Step4,
+                    If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
+                    Date_Step4 = rec.Value.Date_Step4,
+                    Dean_Name = rec.Value.Dean_Name,
+                    Agree_Step5 = rec.Value.Agree_Step5,
+                    Comments_Step5 = rec.Value.Comments_Step5,
+                    If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
+                    Step5_Date = rec.Value.Step5_Date,
+                    Faculty_Comments = rec.Value.Faculty_Comments,
+                    Student_Comments_Page5 = rec.Value.Student_Comments_Page5,
+                    OSA_Use_Only = rec.Value.OSA_Use_Only
+
                 });
             }
             
@@ -209,7 +234,7 @@ namespace Project
             Console.WriteLine("result", res);
             if (res == "OK")
             {
-                this.Students = GetStudents();
+                this.Students = GetStudents();//or i could just edit student object directly( would be faster)
                 return true;
                 
             }
@@ -248,7 +273,7 @@ namespace Project
             button10.FlatStyle = FlatStyle.Standard;
             
             groupBox1.Text = "Edit";
-            checkBox1.Text = "Allow Edit";
+            checkBox1.Text = "Allow Edit"; 
         }
 
         private void button10_Click(object sender, EventArgs e)
