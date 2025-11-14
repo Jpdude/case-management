@@ -29,7 +29,7 @@ namespace Project
         private List<Student> GetStudents()
         {
 
-            StreamReader read = new StreamReader("data2.txt");//change back to data.txt
+            StreamReader read = new StreamReader("data.txt");//change back to data.txt
             String Textdata = read.ReadToEnd();
            
             var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
@@ -232,9 +232,11 @@ namespace Project
             }
             //Console.ReadKey();
             Console.WriteLine("result", res);
-            if (res == "OK")
+            if (res.Trim() == "OK" )
             {
+                Console.WriteLine("INNN");
                 this.Students = GetStudents();//or i could just edit student object directly( would be faster)
+                dataGridView1.DataSource = this.Students;
                 return true;
                 
             }
@@ -290,7 +292,7 @@ namespace Project
 
         }
 
-        private void inflate(string name , string info , Boolean file= false)
+        private void inflate(string name , string info , Boolean file= false , Boolean disable = false)
         {
             if (file)
             {
@@ -308,13 +310,42 @@ namespace Project
                 //Console.WriteLine("tbx: " + name+" "+info);
                 //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
                 RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
-                Console.WriteLine("tbx: " + tbx);
-
+                //Console.WriteLine("tbx: " + tbx);
+                if (name == "Student_Advised_1")
+                {
+                    if (info == "true")
+                    {
+                        button4.Text = "✅";
+                    }
+                    else
+                    {
+                        button4.Text = "";
+                    }
+                }else if(name == "Student_Advised_2")
+                {
+                    if (info == "true")
+                    {
+                        button5.Text = "✅";
+                    }
+                    else
+                    {
+                        button5.Text = "";
+                    }
+                }
                 //Console.WriteLine("tbx1: " + tbx1);
                 if (tbx != null)
                 {
                     tbx.Text = info;
-                    tbx.Enabled = false;
+                    if (disable)
+                    {
+                        tbx.Enabled = false;
+                    }
+                    else
+                    {
+                        tbx.Enabled = true;
+
+                    }
+
 
                 }
             }
@@ -328,7 +359,32 @@ namespace Project
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            var students = this.Students;
+            if (groupBox1.Text == "Edit")
+            {
+                foreach (var rec in students)
+                {
+                    if (this.id == int.Parse(rec.id))
+                    {
+                        foreach (var attr in rec.GetType().GetProperties())
+                        {
+                            if (checkBox1.Checked)
+                            {
+                                this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
+                            }
+                            else
+                            {
+                                this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);
+                            }
+                            
 
+                        }
+
+                    }
+                }
+            }
+            
+            
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -343,7 +399,7 @@ namespace Project
                     this.id = int.Parse(rec.id);
                     foreach (var attr in rec.GetType().GetProperties())
                     {
-                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
+                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);
                         //Console.WriteLine(attr.Name);
                         //Console.WriteLine(attr.GetValue(rec, null).ToString());
                     }
@@ -360,23 +416,13 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var students = this.Students;
-            if (this.id >= 0)
+            if (button4.Text == "✅")
             {
-                foreach (var rec in students)
-                {
-                    if (int.Parse(rec.id) == this.id)
-                    {
-                        if (rec.Student_Advised_1 == "true")
-                        {
-                            button4.Text = "✅";
-                        }
-                        else
-                        {
-                            button4.Text = "";
-                        }
-                    }
-                }
+                button4.Text = "";
+            }
+            else
+            {
+                button4.Text = "✅";
             }
 
         }
@@ -398,23 +444,13 @@ namespace Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var students = this.Students;
-            if (this.id >= 0)
+            if (button5.Text == "✅")
             {
-                foreach (var rec in students)
-                {
-                    if (int.Parse(rec.id) == this.id)
-                    {
-                        if (rec.Student_Advised_1 == "true")
-                        {
-                            button5.Text = "✅";
-                        }
-                        else
-                        {
-                            button5.Text = "";
-                        }
-                    }
-                }
+                button5.Text = "";
+            }
+            else
+            {
+                button5.Text = "✅";
             }
         }
 
@@ -463,7 +499,7 @@ namespace Project
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
-            Console.WriteLine(this.run($"{type} {id} -o -i text"));
+            Console.WriteLine(this.run($"{type} {id} -o -i {text}"));
         }
         private void button7_Click(object sender, EventArgs e)
         {
