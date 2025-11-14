@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Project
 {
@@ -275,7 +276,6 @@ namespace Project
             button10.FlatStyle = FlatStyle.Standard;
             
             groupBox1.Text = "Edit";
-            checkBox1.Text = "Allow Edit"; 
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -287,7 +287,7 @@ namespace Project
             button11.FlatStyle = FlatStyle.Standard;
 
             groupBox1.Text = "Add";
-            checkBox1.Text = "Auto Save";
+            
 
 
         }
@@ -360,29 +360,28 @@ namespace Project
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             var students = this.Students;
-            if (groupBox1.Text == "Edit")
+            
+            foreach (var rec in students)
             {
-                foreach (var rec in students)
+                if (this.id == int.Parse(rec.id))
                 {
-                    if (this.id == int.Parse(rec.id))
+                    foreach (var attr in rec.GetType().GetProperties())
                     {
-                        foreach (var attr in rec.GetType().GetProperties())
+                        if (checkBox1.Checked)
                         {
-                            if (checkBox1.Checked)
-                            {
-                                this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
-                            }
-                            else
-                            {
-                                this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);
-                            }
+                            this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
+                        }
+                        else
+                        {
+                            this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);
+                        }
                             
 
-                        }
-
                     }
+
                 }
             }
+            
             
             
         }
@@ -390,6 +389,7 @@ namespace Project
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.CurrentRow.Selected = true;
+            tabControl1.SelectedTab = tabPage1;
             //Console.WriteLine(dataGridView1.Columns[e.ColumnIndex]);
             var students = this.Students;
             foreach (var rec in students)
@@ -499,7 +499,7 @@ namespace Project
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
-            Console.WriteLine(this.run($"{type} {id} -o -i {text}"));
+            Console.WriteLine(this.run($"{type} {id} -o -i \"{text}\" "));
         }
         private void button7_Click(object sender, EventArgs e)
         {
