@@ -236,7 +236,7 @@ namespace Project
                 if (tbx != null)
                 {
                     
-                    this.text += $"'{name}','{tbx.Text}',";
+                    this.text += $"('{name}','{tbx.Text}'),";
                 }
                 
 
@@ -340,7 +340,7 @@ namespace Project
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void update(String type)
         {
             Console.WriteLine("ID" + this.id);
             var students = this.Students;
@@ -354,7 +354,7 @@ namespace Project
                 {
                     foreach (var attr in rec.GetType().GetProperties())
                     {
-                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),true);
+                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(), true);
                     }
 
                 }
@@ -380,6 +380,10 @@ namespace Project
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            update("add")
         }
     }
 }
