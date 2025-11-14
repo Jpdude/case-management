@@ -47,7 +47,7 @@ namespace Project
                     Student_Number = rec.Value.Student_Number,
                     Student_Email = rec.Value.Student_Email,
                     Course_Name_Number = rec.Value.Course_Name_Number,
-                   
+                    Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
                     Department = rec.Value.Department,
                     Term_Or_Semester = rec.Value.Term_Or_Semester,
                     Description_Violation = rec.Value.Description_Violation,
@@ -360,14 +360,25 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (button4.Text == "✅")
+            var students = this.Students;
+            if (this.id >= 0)
             {
-                button4.Text = "";
+                foreach (var rec in students)
+                {
+                    if (int.Parse(rec.id) == this.id)
+                    {
+                        if (rec.Student_Advised_1 == "true")
+                        {
+                            button4.Text = "✅";
+                        }
+                        else
+                        {
+                            button4.Text = "";
+                        }
+                    }
+                }
             }
-            else
-            {
-                button4.Text = "✅";
-            }
+
         }
 
         private void label29_Click(object sender, EventArgs e)
@@ -387,13 +398,23 @@ namespace Project
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (button5.Text == "✅")
+            var students = this.Students;
+            if (this.id >= 0)
             {
-                button5.Text = "";
-            }
-            else
-            {
-                button5.Text = "✅";
+                foreach (var rec in students)
+                {
+                    if (int.Parse(rec.id) == this.id)
+                    {
+                        if (rec.Student_Advised_1 == "true")
+                        {
+                            button5.Text = "✅";
+                        }
+                        else
+                        {
+                            button5.Text = "";
+                        }
+                    }
+                }
             }
         }
 
@@ -468,6 +489,11 @@ namespace Project
                     }
 
             }
+        }
+
+        private void Student_Number_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

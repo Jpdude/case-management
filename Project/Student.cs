@@ -13,6 +13,7 @@ namespace Project
         public string Student_Number { get; set; }
         public string Student_Email { get; set; }
         public string Course_Name_Number { get; set; }
+        public string Assignment_Number_Or_Exam { get; set; }
         public string Department { get; set; }
         public string Term_Or_Semester { get; set; }
         public string Description_Violation { get; set; }

@@ -52,7 +52,7 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label32 = new System.Windows.Forms.Label();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
+            this.Description_Violation = new System.Windows.Forms.RichTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -61,10 +61,10 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
-            this.richTextBox16 = new System.Windows.Forms.RichTextBox();
+            this.Step2_Date = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.label27 = new System.Windows.Forms.Label();
-            this.richTextBox17 = new System.Windows.Forms.RichTextBox();
+            this.Faculty_Member_Name_2 = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -73,20 +73,20 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
+            this.Term_Or_Semester = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label22 = new System.Windows.Forms.Label();
-            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
+            this.Department = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
+            this.Assignment_Number_Or_Exam = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.Step_One_Date = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label20 = new System.Windows.Forms.Label();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.Course_Name_Number = new System.Windows.Forms.RichTextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.Faculty_Member_Name = new System.Windows.Forms.RichTextBox();
@@ -335,7 +335,7 @@
             this.tabPage1.AllowDrop = true;
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.richTextBox14);
+            this.tabPage1.Controls.Add(this.Description_Violation);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.label30);
@@ -387,16 +387,16 @@
             this.label32.TabIndex = 36;
             this.label32.Text = ": (please check these boxes when completed).";
             // 
-            // richTextBox14
+            // Description_Violation
             // 
-            this.richTextBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox14.Location = new System.Drawing.Point(27, 947);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.Size = new System.Drawing.Size(1087, 110);
-            this.richTextBox14.TabIndex = 26;
-            this.richTextBox14.Text = "";
-            this.richTextBox14.TextChanged += new System.EventHandler(this.richTextBox14_TextChanged);
+            this.Description_Violation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Description_Violation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Description_Violation.Location = new System.Drawing.Point(27, 947);
+            this.Description_Violation.Name = "Description_Violation";
+            this.Description_Violation.Size = new System.Drawing.Size(1087, 110);
+            this.Description_Violation.TabIndex = 26;
+            this.Description_Violation.Text = "";
+            this.Description_Violation.TextChanged += new System.EventHandler(this.richTextBox14_TextChanged);
             // 
             // label24
             // 
@@ -472,11 +472,11 @@
             // flowLayoutPanel10
             // 
             this.flowLayoutPanel10.Controls.Add(this.label26);
-            this.flowLayoutPanel10.Controls.Add(this.richTextBox16);
+            this.flowLayoutPanel10.Controls.Add(this.Step2_Date);
             this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel10.Location = new System.Drawing.Point(703, 4);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(334, 67);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(378, 67);
             this.flowLayoutPanel10.TabIndex = 26;
             // 
             // label26
@@ -489,20 +489,20 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Date (yyyy-mm-dd)";
             // 
-            // richTextBox16
+            // Step2_Date
             // 
-            this.richTextBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox16.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox16.Name = "richTextBox16";
-            this.richTextBox16.Size = new System.Drawing.Size(331, 47);
-            this.richTextBox16.TabIndex = 1;
-            this.richTextBox16.Text = "";
+            this.Step2_Date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Step2_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Step2_Date.Location = new System.Drawing.Point(3, 16);
+            this.Step2_Date.Name = "Step2_Date";
+            this.Step2_Date.Size = new System.Drawing.Size(375, 47);
+            this.Step2_Date.TabIndex = 1;
+            this.Step2_Date.Text = "";
             // 
             // flowLayoutPanel11
             // 
             this.flowLayoutPanel11.Controls.Add(this.label27);
-            this.flowLayoutPanel11.Controls.Add(this.richTextBox17);
+            this.flowLayoutPanel11.Controls.Add(this.Faculty_Member_Name_2);
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel11.Location = new System.Drawing.Point(262, 4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
@@ -519,15 +519,15 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "Name of Faculty Member";
             // 
-            // richTextBox17
+            // Faculty_Member_Name_2
             // 
-            this.richTextBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox17.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox17.Name = "richTextBox17";
-            this.richTextBox17.Size = new System.Drawing.Size(554, 47);
-            this.richTextBox17.TabIndex = 1;
-            this.richTextBox17.Text = "";
+            this.Faculty_Member_Name_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Faculty_Member_Name_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Faculty_Member_Name_2.Location = new System.Drawing.Point(3, 16);
+            this.Faculty_Member_Name_2.Name = "Faculty_Member_Name_2";
+            this.Faculty_Member_Name_2.Size = new System.Drawing.Size(432, 47);
+            this.Faculty_Member_Name_2.TabIndex = 1;
+            this.Faculty_Member_Name_2.Text = "";
             // 
             // flowLayoutPanel12
             // 
@@ -603,11 +603,11 @@
             // flowLayoutPanel9
             // 
             this.flowLayoutPanel9.Controls.Add(this.label23);
-            this.flowLayoutPanel9.Controls.Add(this.richTextBox12);
+            this.flowLayoutPanel9.Controls.Add(this.Term_Or_Semester);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(713, 4);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(318, 67);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(377, 67);
             this.flowLayoutPanel9.TabIndex = 26;
             // 
             // label23
@@ -620,20 +620,20 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Term or Semester";
             // 
-            // richTextBox12
+            // Term_Or_Semester
             // 
-            this.richTextBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox12.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(315, 47);
-            this.richTextBox12.TabIndex = 1;
-            this.richTextBox12.Text = "";
+            this.Term_Or_Semester.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Term_Or_Semester.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Term_Or_Semester.Location = new System.Drawing.Point(3, 16);
+            this.Term_Or_Semester.Name = "Term_Or_Semester";
+            this.Term_Or_Semester.Size = new System.Drawing.Size(374, 47);
+            this.Term_Or_Semester.TabIndex = 1;
+            this.Term_Or_Semester.Text = "";
             // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.Controls.Add(this.label22);
-            this.flowLayoutPanel8.Controls.Add(this.richTextBox13);
+            this.flowLayoutPanel8.Controls.Add(this.Department);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(266, 4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
@@ -650,20 +650,20 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Department";
             // 
-            // richTextBox13
+            // Department
             // 
-            this.richTextBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox13.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox13.Name = "richTextBox13";
-            this.richTextBox13.Size = new System.Drawing.Size(554, 47);
-            this.richTextBox13.TabIndex = 1;
-            this.richTextBox13.Text = "";
+            this.Department.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Department.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Department.Location = new System.Drawing.Point(3, 16);
+            this.Department.Name = "Department";
+            this.Department.Size = new System.Drawing.Size(438, 47);
+            this.Department.TabIndex = 1;
+            this.Department.Text = "";
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.label21);
-            this.flowLayoutPanel7.Controls.Add(this.richTextBox11);
+            this.flowLayoutPanel7.Controls.Add(this.Assignment_Number_Or_Exam);
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
@@ -680,15 +680,15 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Assignment Number or Exam ";
             // 
-            // richTextBox11
+            // Assignment_Number_Or_Exam
             // 
-            this.richTextBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox11.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(323, 47);
-            this.richTextBox11.TabIndex = 1;
-            this.richTextBox11.Text = "";
+            this.Assignment_Number_Or_Exam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Assignment_Number_Or_Exam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Assignment_Number_Or_Exam.Location = new System.Drawing.Point(3, 16);
+            this.Assignment_Number_Or_Exam.Name = "Assignment_Number_Or_Exam";
+            this.Assignment_Number_Or_Exam.Size = new System.Drawing.Size(253, 47);
+            this.Assignment_Number_Or_Exam.TabIndex = 1;
+            this.Assignment_Number_Or_Exam.Text = "";
             // 
             // tableLayoutPanel1
             // 
@@ -715,7 +715,7 @@
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label19);
-            this.flowLayoutPanel5.Controls.Add(this.richTextBox9);
+            this.flowLayoutPanel5.Controls.Add(this.Step_One_Date);
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(373, 81);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
@@ -732,24 +732,24 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Date (yyyy-mm-dd)";
             // 
-            // richTextBox9
+            // Step_One_Date
             // 
-            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox9.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(212, 47);
-            this.richTextBox9.TabIndex = 1;
-            this.richTextBox9.Text = "";
+            this.Step_One_Date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Step_One_Date.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Step_One_Date.Location = new System.Drawing.Point(3, 16);
+            this.Step_One_Date.Name = "Step_One_Date";
+            this.Step_One_Date.Size = new System.Drawing.Size(212, 47);
+            this.Step_One_Date.TabIndex = 1;
+            this.Step_One_Date.Text = "";
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.label20);
-            this.flowLayoutPanel6.Controls.Add(this.richTextBox10);
+            this.flowLayoutPanel6.Controls.Add(this.Course_Name_Number);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(533, 81);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(498, 68);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(558, 68);
             this.flowLayoutPanel6.TabIndex = 23;
             // 
             // label20
@@ -762,15 +762,15 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Course Name and Number";
             // 
-            // richTextBox10
+            // Course_Name_Number
             // 
-            this.richTextBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.richTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox10.Location = new System.Drawing.Point(3, 16);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(495, 47);
-            this.richTextBox10.TabIndex = 1;
-            this.richTextBox10.Text = "";
+            this.Course_Name_Number.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.Course_Name_Number.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Course_Name_Number.Location = new System.Drawing.Point(3, 16);
+            this.Course_Name_Number.Name = "Course_Name_Number";
+            this.Course_Name_Number.Size = new System.Drawing.Size(554, 47);
+            this.Course_Name_Number.TabIndex = 1;
+            this.Course_Name_Number.Text = "";
             // 
             // flowLayoutPanel4
             // 
@@ -809,7 +809,7 @@
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(533, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(498, 68);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(558, 68);
             this.flowLayoutPanel3.TabIndex = 24;
             // 
             // label17
@@ -828,7 +828,7 @@
             this.Student_Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Student_Email.Location = new System.Drawing.Point(3, 16);
             this.Student_Email.Name = "Student_Email";
-            this.Student_Email.Size = new System.Drawing.Size(495, 47);
+            this.Student_Email.Size = new System.Drawing.Size(554, 47);
             this.Student_Email.TabIndex = 1;
             this.Student_Email.Text = "";
             // 
@@ -861,6 +861,7 @@
             this.Student_Number.Size = new System.Drawing.Size(212, 47);
             this.Student_Number.TabIndex = 1;
             this.Student_Number.Text = "";
+            this.Student_Number.TextChanged += new System.EventHandler(this.Student_Number_TextChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -1313,34 +1314,34 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.RichTextBox richTextBox16;
+        private System.Windows.Forms.RichTextBox Step2_Date;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.RichTextBox richTextBox17;
+        private System.Windows.Forms.RichTextBox Faculty_Member_Name_2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.RichTextBox richTextBox14;
+        private System.Windows.Forms.RichTextBox Description_Violation;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.RichTextBox richTextBox12;
+        private System.Windows.Forms.RichTextBox Term_Or_Semester;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.RichTextBox richTextBox13;
+        private System.Windows.Forms.RichTextBox Department;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RichTextBox richTextBox11;
+        private System.Windows.Forms.RichTextBox Assignment_Number_Or_Exam;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RichTextBox richTextBox9;
+        private System.Windows.Forms.RichTextBox Step_One_Date;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.RichTextBox Course_Name_Number;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RichTextBox Faculty_Member_Name;
