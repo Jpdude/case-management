@@ -599,5 +599,21 @@ namespace Project
 
             
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            //panel3.Size = new Size(0,0);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+        }
     }
 }
