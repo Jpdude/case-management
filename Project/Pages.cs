@@ -181,6 +181,13 @@ namespace Project
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            Console.WriteLine(e.ColumnIndex);
+            if (e.ColumnIndex == 9)
+            {
+                Console.WriteLine("DELETE");
+                //Delete
+
+            }
 
         }
 
@@ -220,11 +227,17 @@ namespace Project
 
         private void inflate(string name , string info)
         {
-            TextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as TextBox;
-            Console.WriteLine(tbx);
+            //Console.WriteLine("tbx: " + name+" "+info);
+            //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
+            RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
+            Console.WriteLine("tbx: "+tbx);
+            
+            //Console.WriteLine("tbx1: " + tbx1);
             if (tbx != null)
             {
                 tbx.Text = info;
+                tbx.Enabled = false;
+
             }
             
         }
@@ -252,7 +265,7 @@ namespace Project
                     {
                         this.inflate(attr.Name, attr.GetValue(rec, null).ToString());
                         Console.WriteLine(attr.Name);
-                        //Console.WriteLine(attr.GetValue(rec, null).ToString());
+                        Console.WriteLine(attr.GetValue(rec, null).ToString());
                     }
 
                 }
