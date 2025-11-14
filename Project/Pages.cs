@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -91,6 +92,15 @@ namespace Project
         {
             var students = this.Students;
             dataGridView1.DataSource = students;
+            int last = dataGridView1.ColumnCount - 1;
+            DataGridViewCellStyle specificCellStyle = new DataGridViewCellStyle();
+            specificCellStyle.BackColor = System.Drawing.Color.FromArgb(150,0,10);
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+
+                row.Cells[last].Style.ApplyStyle(specificCellStyle);
+
+            }
         }
 
         
@@ -250,6 +260,8 @@ namespace Project
         {
             Console.WriteLine(e.ColumnIndex);
             
+
+
             if (e.ColumnIndex == 9)
             {
                 String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
@@ -270,22 +282,35 @@ namespace Project
 
         private void button11_Click(object sender, EventArgs e)
         {
-            button11.BackColor = SystemColors.HotTrack;
-            button11.FlatStyle = FlatStyle.Popup;
+            button11.BackColor = System.Drawing.Color.FromArgb(0, 152, 254);
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 102, 204);
+            
+            
+            button11.Size  = new Size(50, 30);
+            button11.Location = new Point(button11.Location.X, button11.Location.Y-5);
 
             button10.BackColor = SystemColors.Control;
             button10.FlatStyle = FlatStyle.Standard;
-            
+            button10.Size = new Size(40, 20);
+            button10.Location = new Point(19, 92);
+
             groupBox1.Text = "Edit";
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            button10.BackColor = SystemColors.HotTrack;
-            button10.FlatStyle = FlatStyle.Popup;
+            button10.BackColor = System.Drawing.Color.FromArgb(0, 152, 254);
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 102, 204);
+            button10.Size = new Size(50, 30);
+            button10.Location = new Point(10, 87);
 
             button11.BackColor = SystemColors.Control;
             button11.FlatStyle = FlatStyle.Standard;
+            button11.Size = new Size(40, 20);
+            button11.Location = new Point(button11.Location.X, button11.Location.Y + 5);
+            //button11.Location = new Point(button11.Location.X, button11.Location.Y - 15);
 
             groupBox1.Text = "Add";
             
