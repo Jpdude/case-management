@@ -221,7 +221,8 @@ namespace Project
 
         public Boolean run(String args)
         {
-            string pythonPath = @"C:\Users\Jp\AppData\Local\Programs\Python\Python313\python.exe";//change this l8r
+            //string pythonPath = @"C:\Users\Jp\AppData\Local\Programs\Python\Python313\python.exe";//change this l8r
+            string pythonPath = @"py";
             string scriptPath = "ProjectRevamp.py"; 
 
             ProcessStartInfo start = new ProcessStartInfo();
