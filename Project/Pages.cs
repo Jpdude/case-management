@@ -557,5 +557,47 @@ namespace Project
         {
 
         }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            if(groupBox1.Text == "Add")
+            {
+                button11.Text = "Edit";
+                button11.BackColor = Color.CornflowerBlue;
+                //button11.FlatStyle = FlatStyle.Flat;
+                button11.FlatAppearance.BorderColor = Color.Blue;
+
+
+                //button11.Size = new Size(50, 30);
+                //button11.Location = new Point(button11.Location.X, button11.Location.Y - 5);
+
+                //button10.BackColor = SystemColors.Control;
+                //button10.FlatStyle = FlatStyle.Standard;
+                //button10.Size = new Size(40, 20);
+                //button10.Location = new Point(19, 92);
+                groupBox1.Text = "Edit";
+            }
+            else
+            {
+                button11.Text = "Add";
+                button11.BackColor = Color.Lime;
+                //button11.FlatStyle = FlatStyle.Flat;
+                button11.FlatAppearance.BorderColor = Color.DarkGreen;
+
+
+                //button11.Size = new Size(50, 30);
+                //button11.Location = new Point(button11.Location.X, button11.Location.Y - 5);
+
+                //button10.BackColor = SystemColors.Control;
+                //button10.FlatStyle = FlatStyle.Standard;
+                //button10.Size = new Size(40, 20);
+                //button10.Location = new Point(19, 92);
+                groupBox1.Text = "Add";
+
+            }
+            
+
+            
+        }
     }
 }
