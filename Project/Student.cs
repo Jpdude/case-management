@@ -17,13 +17,20 @@ namespace Project
         public string Department { get; set; }
         public string Term_Or_Semester { get; set; }
         public string Description_Violation { get; set; }
+        public string Description_Violation_1 { get; set; }
         public string Faculty_Member_Name { get; set; }
 
         public string Step_One_Date { get; set; }
-        public string Recommendations_For_Sanction { get; set; }
+
+        //add
+        public string Step_One_Date_1 { get; set; }
+        //add
+        public string Faculty_Member_Name_1 { get; set; }
         public string Student_Advised_1 { get; set; }
         public string Student_Advised_2 { get; set; }
         public string Student_Name_Step2 { get; set; }
+        //Design Flaw, theyre only meant to choose 1 option but bruh im too tired too care
+        
         public string MyTRU_Email { get; set; }
         public string Step2_Date { get; set; }
         public string Student_Agreement { get; set; }

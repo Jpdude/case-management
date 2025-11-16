@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,6 @@ namespace Project
     {
         public List<Student> Students { get; set; }
         public int id;
-        String text = "";
         public Pages()
         {
             Students = GetStudents();
@@ -55,10 +55,14 @@ namespace Project
                     Department = rec.Value.Department,
                     Term_Or_Semester = rec.Value.Term_Or_Semester,
                     Description_Violation = rec.Value.Description_Violation,
+                    Description_Violation_1 = rec.Value.Description_Violation_1,
                     Faculty_Member_Name = rec.Value.Faculty_Member_Name,
 
+                    Step_One_Date_1 = rec.Value.Step_One_Date_1,
+
+                    Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
                     Step_One_Date = rec.Value.Step_One_Date,
-                    Recommendations_For_Sanction = rec.Value.Recommendations_For_Sanction,
+                    
                     Student_Advised_1 = rec.Value.Student_Advised_1,
                     Student_Advised_2 = rec.Value.Student_Advised_2,
                     Student_Name_Step2 = rec.Value.Student_Name_Step2,
@@ -329,63 +333,151 @@ namespace Project
 
         }
 
-        private void inflate(string name , string info , Boolean file= false , Boolean disable = false)
+        public String checkBoxes(String first , String second , Boolean adv = false)
         {
-            if (file)
+            if (adv)
             {
-                RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
-                if (tbx != null)
+                if (first == "✅")
                 {
-                    
-                    this.text += $"('{name}','{tbx.Text}'),";
+                    return "true";
                 }
-                
-
+                else
+                {
+                    return "false";
+                }
             }
             else
             {
-                //Console.WriteLine("tbx: " + name+" "+info);
-                //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
-                RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
-                //Console.WriteLine("tbx: " + tbx);
-                if (name == "Student_Advised_1")
+                if (first == "" && second == "")
                 {
-                    if (info == "true")
-                    {
-                        button4.Text = "✅";
-                    }
-                    else
-                    {
-                        button4.Text = "";
-                    }
-                }else if(name == "Student_Advised_2")
-                {
-                    if (info == "true")
-                    {
-                        button5.Text = "✅";
-                    }
-                    else
-                    {
-                        button5.Text = "";
-                    }
+
+                    return "";
                 }
-                //Console.WriteLine("tbx1: " + tbx1);
-                if (tbx != null)
+                else if (first == "✅")
                 {
-                    tbx.Text = info;
-                    if (disable)
-                    {
-                        tbx.Enabled = false;
-                    }
-                    else
-                    {
-                        tbx.Enabled = true;
-
-                    }
-
-
+                    return "true";
+                }
+                else
+                {
+                    return "false";
                 }
             }
+            
+            
+        }
+        private void inflate(string name , string info , Boolean file= false , Boolean disable = false)
+        {
+            
+
+            //Console.WriteLine("tbx: " + name+" "+info);
+            //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
+            RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
+            //Console.WriteLine("tbx: " + tbx);
+            if (name == "Student_Advised_1")
+            {
+                if (info == "true")
+                {
+                    button4.Text = "✅";
+                }
+                else
+                {
+                    button4.Text = "";
+                }
+                
+            }
+            else if(name == "Student_Advised_2")
+            {
+                if (info == "true")
+                {
+                    button5.Text = "✅";
+                }
+                else
+                {
+                    button5.Text = "";
+                }
+            }
+
+            if (name == "Student_Agreement")
+            {
+                if (info == "true")
+                {
+                    Review_Yes.Text = "✅";
+                    Review_No.Text = "";
+                }
+                else
+                {
+                    Review_No.Text = "✅";
+                    Review_Yes.Text = "";
+                }
+            }
+                
+
+            if (name == "Agree_Step4")
+            {
+                if (info == "true")
+                {
+                    button_dept_y.Text = "✅";
+                }
+                else
+                {
+                    button_dept_n.Text = "✅";
+                }
+            }
+
+            if (name == "Agree_Step5")
+            {
+                if (info == "true")
+                {
+                    dean_y.Text = "✅";
+                }
+                else
+                {
+                    dean_n.Text = "✅";
+                }
+            }
+            if (disable)
+            {
+                
+                button4.Enabled = false;
+                button5.Enabled = false;
+                Review_Yes.Enabled = false;
+                Review_No.Enabled = false;
+                button_dept_y.Enabled = false;
+                button_dept_n.Enabled = false;
+                dean_y.Enabled = false;
+                dean_n.Enabled = false;
+            }
+            else
+            {
+                button4.Enabled = true;
+                button5.Enabled = true;
+                Review_Yes.Enabled = true;
+                Review_No.Enabled = true;
+                button_dept_y.Enabled = true;
+                button_dept_n.Enabled = true;
+                dean_y.Enabled = true;
+                dean_n.Enabled = true;
+
+            }
+
+            //Console.WriteLine("tbx1: " + tbx1);
+            if (tbx != null)
+            {
+                tbx.Text = info;
+                if (disable)
+                {
+                    tbx.Enabled = false;
+                   
+                }
+                else
+                {
+                    tbx.Enabled = true;
+
+                }
+
+
+            }
+            
             
         }
 
@@ -426,7 +518,7 @@ namespace Project
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.CurrentRow.Selected = true;
-            tabControl1.SelectedTab = tabPage1;
+            tabControl1.SelectedTab = tabPage4;
             //Console.WriteLine(dataGridView1.Columns[e.ColumnIndex]);
             var students = this.Students;
             foreach (var rec in students)
@@ -451,8 +543,26 @@ namespace Project
 
         }
 
+        public void changeBtn( Button mainBtn , Button subBtn)
+        {
+            if ( subBtn.Text == "✅")
+            {
+                subBtn.Text = "";
+            }
+            if (mainBtn.Text == "✅")
+            {
+                mainBtn.Text = "";
+            }
+            else
+            {
+                mainBtn.Text = "✅";
+            }
+
+
+        }
         private void button4_Click(object sender, EventArgs e)
         {
+
             if (button4.Text == "✅")
             {
                 button4.Text = "";
@@ -461,7 +571,6 @@ namespace Project
             {
                 button4.Text = "✅";
             }
-
         }
 
         private void label29_Click(object sender, EventArgs e)
@@ -501,7 +610,9 @@ namespace Project
             Console.WriteLine("ID" + this.id);
             var students = this.Students;
             var id = this.id;
-            this.text = "[";
+            String text = "[";
+            String t = "";
+            Boolean d = false;
             StreamWriter writer = new StreamWriter("update.txt");
 
             foreach (var rec in students)
@@ -510,7 +621,41 @@ namespace Project
                 {
                     foreach (var attr in rec.GetType().GetProperties())
                     {
-                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(), true);
+                        RichTextBox tbx = this.Controls.Find(attr.Name, true).FirstOrDefault() as RichTextBox;
+
+                        
+                        
+                        if (tbx != null || attr.Name == "Student_Agreement" || attr.Name == "Agree_Step4" || attr.Name == "Agree_Step5" || attr.Name == "Student_Advised_1" || attr.Name == "Student_Advised_2")
+                        {
+                            if (attr.Name == "Student_Agreement")
+                            {
+                                t = checkBoxes(Review_Yes.Text, Review_No.Text);
+                            }
+                            else if (attr.Name == "Agree_Step4")
+                            {
+                                t = checkBoxes(button_dept_y.Text, button_dept_n.Text);
+                            }
+
+                            else if (attr.Name == "Agree_Step5")
+                            {
+                                t = checkBoxes( dean_y.Text, dean_n.Text);
+                            }
+                            else if (attr.Name == "student_advised_1")
+                            {
+                                t = checkBoxes(button4.Text,"",true);
+                            }
+                            else if (attr.Name == "student_advised_2")
+                            {
+                                t = checkBoxes(button5.Text, "",true);
+                            }
+                            if (tbx != null)
+                                t = tbx.Text;
+                            text += $"('{attr.Name}','{t}'),";
+
+                            if (t == "")
+                                d = true;
+                        }
+                        //this.inflate(attr.Name, attr.GetValue(rec, null).ToString(), true);
                     }
 
                 }
@@ -528,15 +673,42 @@ namespace Project
 
             //    }
             //}
-            this.text += "]";
-            writer.WriteLine(text);
+            text += "]";
+            
+
+                writer.WriteLine(text);
             writer.Close();
             Console.WriteLine(text);
             //String text = richTextBox2.Text;
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
             //write.Close();
+            
+            if (d)
+            {
+                DialogResult result = MessageBox.Show("You may be missing some info, Do you wish to coutinue?",
+                                             "Exit Confirmation",
+                                             MessageBoxButtons.YesNoCancel,
+                                             MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    
+                }
+                else
+                {
+                    type = "non";
+                }
+            }
+            
+                
+                
             Console.WriteLine(this.run($"{type} {id} -o -i \"{text}\" "));
+            tabControl1.SelectedTab = tabPage3;
+            checkBox1.Checked = false;
+            if (type != "non")
+                MessageBox.Show("Data Sucessfully Saved!.");
+            
+
         }
         private void button7_Click(object sender, EventArgs e)
         {
@@ -679,7 +851,7 @@ namespace Project
 
         private void button14_Click_1(object sender, EventArgs e)
         {
-
+            changeBtn(Review_Yes, Review_No);
         }
 
 
@@ -789,6 +961,31 @@ namespace Project
         private void label7_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Review_No_Click(object sender, EventArgs e)
+        {
+            changeBtn(Review_No, Review_Yes);
+        }
+
+        private void button_dept_y_Click(object sender, EventArgs e)
+        {
+            changeBtn(button_dept_y, button_dept_n);
+        }
+
+        private void button_dept_n_Click(object sender, EventArgs e)
+        {
+            changeBtn(button_dept_n, button_dept_y);
+        }
+
+        private void dean_y_Click(object sender, EventArgs e)
+        {
+            changeBtn(dean_y, dean_n);
+        }
+
+        private void dean_n_Click(object sender, EventArgs e)
+        {
+            changeBtn(dean_n, dean_y);
         }
     }
 }
