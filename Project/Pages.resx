@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJ9JREFUOE/tksEJg0AQRQ14V7AEIeDNTgKB3D2lgkCuuXuzDFuwhfRgAyEdJC8M
+        /BUdNkRy9sNj2O++VWSTJBIgBY7AWez9nq8BDizT+D1TgB3QAXcxOtnW4ZlRzOUCGFZyW7xZB+TAaQW5
+        d02u9YlvYXlFutq7c/kiHkCmGbqfciNG9fazQrfJEbkXT+CqGTpL5V2Ty8ht8rR2lb37Vz5AAvUGMjCI
+        PwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label25.Text" xml:space="preserve">
     <value>Recommendations for sanction.
 Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
@@ -130,7 +146,6 @@ at which the Case Report Form and all evidence will be reviewed by and presented
 The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
 to aic@tru.ca.</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAF8AAABUCAYAAADki+s2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -519,21 +534,6 @@ to aic@tru.ca.</value>
         YII=
 </value>
   </data>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJ9JREFUOE/tksEJg0AQRQ14V7AEIeDNTgKB3D2lgkCuuXuzDFuwhfRgAyEdJC8M
-        /BUdNkRy9sNj2O++VWSTJBIgBY7AWez9nq8BDizT+D1TgB3QAXcxOtnW4ZlRzOUCGFZyW7xZB+TAaQW5
-        d02u9YlvYXlFutq7c/kiHkCmGbqfciNG9fazQrfJEbkXT+CqGTpL5V2Ty8ht8rR2lb37Vz5AAvUGMjCI
-        PwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="label42.Text" xml:space="preserve">
     <value>I,                                                                          (STUDENT NAME, TYPED or PRINTED) have been made aware of
 Academic Integrity Policy ED 5-0, as well as my alleged violation of this policy.
@@ -555,6 +555,19 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
     5. Save this form to your computer and email it back to the Faculty Member within seven (7) days of receipt.
     6.If this form is not returned within seven (7) days of receipt, the Faculty Member will proceed.</value>
   </data>
+  <data name="richTextBox13.Text" xml:space="preserve">
+    <value>
+     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
+
+     Department Chair (or designate):
+     When you receive this form from the Faculty Member, complete the following:
+     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
+     2. Answer the question below.
+     3. Ensure that the evidence is attached.
+     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
+         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
+     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
+  </data>
   <data name="richTextBox23.Text" xml:space="preserve">
     <value>     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Dean. All
      cases that reach the Academic Integrity Committee must have been forwarded from the Dean (or designate), rather than
@@ -571,19 +584,6 @@ the Chairperson of the Academic Integrity Committee and the Director of Student 
      5. Save this form to your computer
      6.Submit the case package within (7) days by emailing the case in one PDF file to aic@tru.ca, or sending the original printed
         copy of the file to the Office of Student Affairs in OM 1631.</value>
-  </data>
-  <data name="richTextBox13.Text" xml:space="preserve">
-    <value>
-     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
-
-     Department Chair (or designate):
-     When you receive this form from the Faculty Member, complete the following:
-     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
-     2. Answer the question below.
-     3. Ensure that the evidence is attached.
-     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
-         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
-     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
   </data>
   <data name="richTextBox2.Text" xml:space="preserve">
     <value>     

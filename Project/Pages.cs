@@ -23,6 +23,7 @@ namespace Project
     {
         public List<Student> Students { get; set; }
         public int id;
+        public Color modify_clr = Color.LightGray;
         public Pages()
         {
             Students = GetStudents();
@@ -450,9 +451,13 @@ namespace Project
 
                 button11.Enabled = false;
                 button10.Enabled = false;
-                groupBox2.Enabled = false;
-                button20.Enabled = false;
-                button19.Enabled = false;
+                modify_clr = Color.LightGray;
+
+                // Did this to reset the colors
+                button19.PerformClick();
+                button20.PerformClick();
+
+
                 button9.Enabled = false;
                 button8.Enabled = false;
 
@@ -473,9 +478,8 @@ namespace Project
 
                 button11.Enabled = true;
                 button10.Enabled = true;
-                groupBox2.Enabled = true;
-                button20.Enabled = true;
-                button19.Enabled = true;
+               
+                
                 button9.Enabled = true;
                 button8.Enabled = true;
 
@@ -786,6 +790,7 @@ namespace Project
                 button11.BackColor = Color.CornflowerBlue;
                 //button11.FlatStyle = FlatStyle.Flat;
                 button11.FlatAppearance.BorderColor = Color.Blue;
+                modify_clr = Color.Blue;
 
 
                 //button11.Size = new Size(50, 30);
@@ -801,6 +806,7 @@ namespace Project
             {
                 button11.Text = "Add";
                 button11.BackColor = Color.Lime;
+                modify_clr = Color.Lime;
                 //button11.FlatStyle = FlatStyle.Flat;
                 button11.FlatAppearance.BorderColor = Color.DarkGreen;
 
@@ -956,7 +962,7 @@ namespace Project
                 Console.WriteLine(ctrl.Text);
                 Console.WriteLine(ctrl.BackColor);
                 Console.WriteLine(i);
-                if (ctrl.BackColor == Color.Lime)
+                if (ctrl.BackColor == modify_clr)
                 {
                     if (i == 0 && num == -1)
                     {
