@@ -90,6 +90,13 @@ namespace Project
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            panel1.AutoScroll = true;
+            panel1.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
             var students = this.Students;
             dataGridView1.DataSource = students;
             treeView1.Nodes.Add("poop");
@@ -165,18 +172,18 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StreamReader read = new StreamReader("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
-            String Textdata = read.ReadLine();
-            read.Close();
-            richTextBox2.Text = Textdata;
+            //StreamReader read = new StreamReader("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
+            //String Textdata = read.ReadLine();
+            //read.Close();
+            //richTextBox2.Text = Textdata;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            String text = richTextBox2.Text;
-            StreamWriter write = new StreamWriter("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
-            write.WriteLine(text);
-            write.Close();
+            //String text = richTextBox2.Text;
+            //StreamWriter write = new StreamWriter("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
+            //write.WriteLine(text);
+            //write.Close();
             
         }
 
@@ -620,6 +627,24 @@ namespace Project
 
         private void button13_Click(object sender, EventArgs e)
         {
+            treeView1.BringToFront();
+            panel1.AutoScroll = true;
+            panel1.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+            Form1.BackColor = Color.Lime;
+
+            Form2.BackColor = Color.LightSkyBlue;
+            Form3.BackColor = Color.LightSkyBlue;
+            Form4.BackColor = Color.LightSkyBlue;
+            Form5.BackColor = Color.LightSkyBlue;
+            Form6.BackColor = Color.LightSkyBlue;
+            
+
 
         }
 
@@ -639,6 +664,129 @@ namespace Project
         }
 
         private void button14_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button16_Click_1(object sender, EventArgs e)
+        {
+            treeView1.BringToFront();
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
+            panel2.Visible = true;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+            Form2.BackColor = Color.Lime;
+
+            Form1.BackColor = Color.LightSkyBlue;
+            Form3.BackColor = Color.LightSkyBlue;
+            Form4.BackColor = Color.LightSkyBlue;
+            Form5.BackColor = Color.LightSkyBlue;
+            Form6.BackColor = Color.LightSkyBlue;
+
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            treeView1.BringToFront();
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = true;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+            Form3.BackColor = Color.Lime;
+
+            Form2.BackColor = Color.LightSkyBlue;
+            Form1.BackColor = Color.LightSkyBlue;
+            Form4.BackColor = Color.LightSkyBlue;
+            Form5.BackColor = Color.LightSkyBlue;
+            Form6.BackColor = Color.LightSkyBlue;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            treeView1.BringToFront();
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = true;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+            Form4.BackColor = Color.Lime;
+
+            Form2.BackColor = Color.LightSkyBlue;
+            Form3.BackColor = Color.LightSkyBlue;
+            Form1.BackColor = Color.LightSkyBlue;
+            Form5.BackColor = Color.LightSkyBlue;
+            Form6.BackColor = Color.LightSkyBlue;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            treeView1.BringToFront();
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = true;
+
+
+            Form6.BackColor = Color.Lime;
+
+            Form2.BackColor = Color.LightSkyBlue;
+            Form3.BackColor = Color.LightSkyBlue;
+            Form4.BackColor = Color.LightSkyBlue;
+            Form5.BackColor = Color.LightSkyBlue;
+            Form1.BackColor = Color.LightSkyBlue;
+        }
+
+        private void Form5_Click(object sender, EventArgs e)
+        {
+            treeView1.BringToFront();
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = true;
+            panel6.Visible = false;
+
+            Form5.BackColor = Color.Lime;
+
+            Form2.BackColor = Color.LightSkyBlue;
+            Form3.BackColor = Color.LightSkyBlue;
+            Form4.BackColor = Color.LightSkyBlue;
+            Form1.BackColor = Color.LightSkyBlue;
+            Form6.BackColor = Color.LightSkyBlue;
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
         {
 
         }
