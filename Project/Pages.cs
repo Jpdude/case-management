@@ -11,8 +11,10 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Project
 {
@@ -627,8 +629,10 @@ namespace Project
 
         private void change( Button form , Panel panel)
         {
-            treeView1.BringToFront();
+            
             panel1.AutoScroll = false;
+            panel0.AutoScroll = false;
+            panel0.Visible = false;
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = false;
@@ -636,9 +640,9 @@ namespace Project
             panel5.Visible = false;
             panel6.Visible = false;
 
-            
+            Console.WriteLine(panel.ToString());
             panel.Visible = true;
-
+            //panel.BringToFront();
 
             Form1.BackColor = Color.LightSkyBlue;
             Form2.BackColor = Color.LightSkyBlue;
@@ -646,12 +650,15 @@ namespace Project
             Form4.BackColor = Color.LightSkyBlue;
             Form5.BackColor = Color.LightSkyBlue;
             Form6.BackColor = Color.LightSkyBlue;
+            Form7.BackColor = Color.LightSkyBlue;
 
             form.BackColor = Color.Lime;
+            treeView1.BringToFront();
         }
         private void button13_Click(object sender, EventArgs e)
         {
             this.change(Form1, panel0);
+            panel0.AutoScroll = true;
 
         }
 
@@ -679,6 +686,7 @@ namespace Project
         private void button16_Click_1(object sender, EventArgs e)
         {
             this.change(Form2, panel1);
+            panel1.AutoScroll = true;
 
         }
 
@@ -689,83 +697,22 @@ namespace Project
 
         private void button17_Click(object sender, EventArgs e)
         {
-            treeView1.BringToFront();
-            panel1.AutoScroll = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = true;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
-
-            Form3.BackColor = Color.Lime;
-
-            Form2.BackColor = Color.LightSkyBlue;
-            Form1.BackColor = Color.LightSkyBlue;
-            Form4.BackColor = Color.LightSkyBlue;
-            Form5.BackColor = Color.LightSkyBlue;
-            Form6.BackColor = Color.LightSkyBlue;
+            this.change(Form3, panel2);
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            treeView1.BringToFront();
-            panel1.AutoScroll = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = true;
-            panel5.Visible = false;
-            panel6.Visible = false;
-
-            Form4.BackColor = Color.Lime;
-
-            Form2.BackColor = Color.LightSkyBlue;
-            Form3.BackColor = Color.LightSkyBlue;
-            Form1.BackColor = Color.LightSkyBlue;
-            Form5.BackColor = Color.LightSkyBlue;
-            Form6.BackColor = Color.LightSkyBlue;
+            this.change(Form4, panel3);
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            treeView1.BringToFront();
-            panel1.AutoScroll = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = true;
-
-
-            Form6.BackColor = Color.Lime;
-
-            Form2.BackColor = Color.LightSkyBlue;
-            Form3.BackColor = Color.LightSkyBlue;
-            Form4.BackColor = Color.LightSkyBlue;
-            Form5.BackColor = Color.LightSkyBlue;
-            Form1.BackColor = Color.LightSkyBlue;
+            this.change(Form6, panel5);
         }
 
         private void Form5_Click(object sender, EventArgs e)
         {
-            treeView1.BringToFront();
-            panel1.AutoScroll = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = true;
-            panel6.Visible = false;
-
-            Form5.BackColor = Color.Lime;
-
-            Form2.BackColor = Color.LightSkyBlue;
-            Form3.BackColor = Color.LightSkyBlue;
-            Form4.BackColor = Color.LightSkyBlue;
-            Form1.BackColor = Color.LightSkyBlue;
-            Form6.BackColor = Color.LightSkyBlue;
+            this.change(Form5, panel4);
         }
 
         private void label2_Click_1(object sender, EventArgs e)
@@ -779,6 +726,67 @@ namespace Project
         }
 
         private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form7_Click(object sender, EventArgs e)
+        {
+            this.change(Form7, panel6);
+        }
+
+        private void nextOrnot(int num)
+        {
+            //Could make this code shorter but bruh..
+            Control.ControlCollection coll = groupBox2.Controls;
+            
+            // If future jp is confused --- the list is in reverse order that's why i stuructured the loop like that
+            for (int i = coll.Count - 1; i >= 0; i--)
+            {
+                Button ctrl = (Button) coll[i];
+                Console.WriteLine(ctrl.Text);
+                Console.WriteLine(ctrl.BackColor);
+                Console.WriteLine(i);
+                if (ctrl.BackColor == Color.Lime)
+                {
+                    if (i == 0 && num == -1)
+                    {
+                        i = 7;
+                    }
+                    else if (i == 6 && num == 1)
+                    {
+                        i = -1;
+                    }
+
+
+                    ctrl = (Button)coll[i + num];
+                    ctrl.PerformClick();
+                    Console.WriteLine(ctrl.Text);
+                    Console.WriteLine(ctrl.BackColor);
+                    Console.WriteLine(i);
+                    break;
+                }
+
+
+            }
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            nextOrnot(1);
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            nextOrnot(-1);
+        }
+
+        private void label14_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
 
         }
