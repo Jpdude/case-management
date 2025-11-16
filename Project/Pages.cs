@@ -92,6 +92,7 @@ namespace Project
         {
             var students = this.Students;
             dataGridView1.DataSource = students;
+            treeView1.Nodes.Add("poop");
             int last = dataGridView1.ColumnCount - 1;
             DataGridViewCellStyle specificCellStyle = new DataGridViewCellStyle();
             specificCellStyle.BackColor = System.Drawing.Color.FromArgb(150,0,10);
@@ -603,7 +604,7 @@ namespace Project
 
         private void button15_Click(object sender, EventArgs e)
         {
-            panel3.Visible = false;
+            //panel3.Visible = false;
             //panel3.Size = new Size(0,0);
         }
 
@@ -614,7 +615,32 @@ namespace Project
 
         private void button14_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;
+            //panel3.Visible = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
