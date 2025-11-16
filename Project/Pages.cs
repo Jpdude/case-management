@@ -480,8 +480,8 @@ namespace Project
                 button8.Enabled = true;
 
                 //Changing the color of the Add/Edit to original calling this twice will set the color apportiately instead of me having to check and set the color myself
-                button11.PerformClick();
-                button11.PerformClick();
+                button10.PerformClick();
+                button10.PerformClick();
 
 
 

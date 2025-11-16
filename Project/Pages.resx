@@ -117,43 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAJ9JREFUOE/tksEJg0AQRQ14V7AEIeDNTgKB3D2lgkCuuXuzDFuwhfRgAyEdJC8M
-        /BUdNkRy9sNj2O++VWSTJBIgBY7AWez9nq8BDizT+D1TgB3QAXcxOtnW4ZlRzOUCGFZyW7xZB+TAaQW5
-        d02u9YlvYXlFutq7c/kiHkCmGbqfciNG9fazQrfJEbkXT+CqGTpL5V2Ty8ht8rR2lb37Vz5AAvUGMjCI
-        PwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="label42.Text" xml:space="preserve">
-    <value>I,                                                                          (STUDENT NAME, TYPED or PRINTED) have been made aware of
-Academic Integrity Policy ED 5-0, as well as my alleged violation of this policy.
-I am aware that, as per Policy ED 5-0, I will be given an opportunity to make a written submission to the Academic Integrity
-Committee. If I feel there has been an error in the Academic Integrity process, I have the right to an appeal as per policies ED
-4-0 (Student Academic Appeals) and ED 5-0 (Student Academic Integrity).
-I am aware that I may contact the Office of Student Affairs for assistance. It has been explained to me that a record of this
-alleged violation will be placed in the Academic Integrity database and held confidentially in the Office of Student Affairs and
-that the only individuals who will have knowledge of my involvement in this occurrence will be the people signing this form,
-the Chairperson of the Academic Integrity Committee and the Director of Student Affairs.</value>
-  </data>
-  <data name="richTextBox6.Text" xml:space="preserve">
-    <value>    1. Read your case and evidence from the Faculty Member.
-    2. Please answer the following question by checking either “Yes” or “No.”
-    3. Enter the date.
-    4. Enter your digital signature by clicking the appropriate signature box by following the instructions in Adobe Reader or
-       Adobe Acrobat or sign the printed copy of the form. Make sure that you do not make any changes to the document
-       after you sign it.
-    5. Save this form to your computer and email it back to the Faculty Member within seven (7) days of receipt.
-    6.If this form is not returned within seven (7) days of receipt, the Faculty Member will proceed.</value>
-  </data>
   <data name="label25.Text" xml:space="preserve">
     <value>Recommendations for sanction.
 Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
@@ -167,6 +130,7 @@ at which the Case Report Form and all evidence will be reviewed by and presented
 The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
 to aic@tru.ca.</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAF8AAABUCAYAAADki+s2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -554,6 +518,42 @@ to aic@tru.ca.</value>
         zNbJCszMzMxsnazAzMzMzNbJCszMzMxsnazAzMzMzNbJCszMzMxsnf8PeU6eOhlBXyQAAAAASUVORK5C
         YII=
 </value>
+  </data>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAJ9JREFUOE/tksEJg0AQRQ14V7AEIeDNTgKB3D2lgkCuuXuzDFuwhfRgAyEdJC8M
+        /BUdNkRy9sNj2O++VWSTJBIgBY7AWez9nq8BDizT+D1TgB3QAXcxOtnW4ZlRzOUCGFZyW7xZB+TAaQW5
+        d02u9YlvYXlFutq7c/kiHkCmGbqfciNG9fazQrfJEbkXT+CqGTpL5V2Ty8ht8rR2lb37Vz5AAvUGMjCI
+        PwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="label42.Text" xml:space="preserve">
+    <value>I,                                                                          (STUDENT NAME, TYPED or PRINTED) have been made aware of
+Academic Integrity Policy ED 5-0, as well as my alleged violation of this policy.
+I am aware that, as per Policy ED 5-0, I will be given an opportunity to make a written submission to the Academic Integrity
+Committee. If I feel there has been an error in the Academic Integrity process, I have the right to an appeal as per policies ED
+4-0 (Student Academic Appeals) and ED 5-0 (Student Academic Integrity).
+I am aware that I may contact the Office of Student Affairs for assistance. It has been explained to me that a record of this
+alleged violation will be placed in the Academic Integrity database and held confidentially in the Office of Student Affairs and
+that the only individuals who will have knowledge of my involvement in this occurrence will be the people signing this form,
+the Chairperson of the Academic Integrity Committee and the Director of Student Affairs.</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>    1. Read your case and evidence from the Faculty Member.
+    2. Please answer the following question by checking either “Yes” or “No.”
+    3. Enter the date.
+    4. Enter your digital signature by clicking the appropriate signature box by following the instructions in Adobe Reader or
+       Adobe Acrobat or sign the printed copy of the form. Make sure that you do not make any changes to the document
+       after you sign it.
+    5. Save this form to your computer and email it back to the Faculty Member within seven (7) days of receipt.
+    6.If this form is not returned within seven (7) days of receipt, the Faculty Member will proceed.</value>
   </data>
   <data name="richTextBox23.Text" xml:space="preserve">
     <value>     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Dean. All
