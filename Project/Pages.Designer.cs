@@ -29,19 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pages));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label30 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -188,7 +185,7 @@
             this.descriptionViolationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyMemberNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel0 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
@@ -255,6 +252,9 @@
             this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -286,7 +286,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.panel0.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
@@ -332,23 +332,23 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -368,8 +368,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Size = new System.Drawing.Size(1150, 267);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -377,10 +377,10 @@
             // 
             // Delete
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
-            dataGridViewCellStyle3.NullValue = null;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(10)))));
+            dataGridViewCellStyle7.NullValue = null;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle7;
             this.Delete.HeaderText = "Delete";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
             this.Delete.Name = "Delete";
@@ -389,10 +389,7 @@
             // 
             this.tabPage1.AllowDrop = true;
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
@@ -403,43 +400,9 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label30
-            // 
-            this.label30.Location = new System.Drawing.Point(1064, 2388);
-            this.label30.Name = "label30";
-            this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label30.Size = new System.Drawing.Size(60, 14);
-            this.label30.TabIndex = 34;
-            this.label30.Text = "FSD21001";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(998, 2080);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(45, 46);
-            this.button5.TabIndex = 30;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(998, 2164);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(45, 46);
-            this.button4.TabIndex = 29;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.panel7);
+            this.tabPage4.Controls.Add(this.panel0);
             this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Controls.Add(this.panel6);
             this.tabPage4.Controls.Add(this.panel5);
@@ -2036,42 +1999,46 @@
             // 
             this.studentBindingSource.DataSource = typeof(Project.Student);
             // 
-            // panel7
+            // panel0
             // 
-            this.panel7.AutoScroll = true;
-            this.panel7.Controls.Add(this.label32);
-            this.panel7.Controls.Add(this.Description_Violation);
-            this.panel7.Controls.Add(this.label31);
-            this.panel7.Controls.Add(this.label25);
-            this.panel7.Controls.Add(this.tableLayoutPanel3);
-            this.panel7.Controls.Add(this.listBox3);
-            this.panel7.Controls.Add(this.tableLayoutPanel2);
-            this.panel7.Controls.Add(this.richTextBox25);
-            this.panel7.Controls.Add(this.tableLayoutPanel1);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.richTextBox4);
-            this.panel7.Controls.Add(this.label12);
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Controls.Add(this.textBox1);
-            this.panel7.Controls.Add(this.richTextBox3);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.richTextBox1);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Controls.Add(this.listBox1);
-            this.panel7.Location = new System.Drawing.Point(83, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1069, 806);
-            this.panel7.TabIndex = 55;
+            this.panel0.AutoScroll = true;
+            this.panel0.Controls.Add(this.label30);
+            this.panel0.Controls.Add(this.button5);
+            this.panel0.Controls.Add(this.button4);
+            this.panel0.Controls.Add(this.label32);
+            this.panel0.Controls.Add(this.label24);
+            this.panel0.Controls.Add(this.Description_Violation);
+            this.panel0.Controls.Add(this.label31);
+            this.panel0.Controls.Add(this.label25);
+            this.panel0.Controls.Add(this.tableLayoutPanel3);
+            this.panel0.Controls.Add(this.listBox3);
+            this.panel0.Controls.Add(this.tableLayoutPanel2);
+            this.panel0.Controls.Add(this.richTextBox25);
+            this.panel0.Controls.Add(this.tableLayoutPanel1);
+            this.panel0.Controls.Add(this.pictureBox2);
+            this.panel0.Controls.Add(this.label14);
+            this.panel0.Controls.Add(this.label13);
+            this.panel0.Controls.Add(this.richTextBox4);
+            this.panel0.Controls.Add(this.label12);
+            this.panel0.Controls.Add(this.label11);
+            this.panel0.Controls.Add(this.label10);
+            this.panel0.Controls.Add(this.textBox1);
+            this.panel0.Controls.Add(this.richTextBox3);
+            this.panel0.Controls.Add(this.label9);
+            this.panel0.Controls.Add(this.label8);
+            this.panel0.Controls.Add(this.label7);
+            this.panel0.Controls.Add(this.label6);
+            this.panel0.Controls.Add(this.label5);
+            this.panel0.Controls.Add(this.pictureBox1);
+            this.panel0.Controls.Add(this.label4);
+            this.panel0.Controls.Add(this.label3);
+            this.panel0.Controls.Add(this.richTextBox1);
+            this.panel0.Controls.Add(this.label2);
+            this.panel0.Controls.Add(this.listBox1);
+            this.panel0.Location = new System.Drawing.Point(83, 0);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(1069, 806);
+            this.panel0.TabIndex = 55;
             // 
             // label29
             // 
@@ -2158,14 +2125,13 @@
             this.Department.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Department.Location = new System.Drawing.Point(3, 16);
             this.Department.Name = "Department";
-            this.Department.Size = new System.Drawing.Size(438, 47);
+            this.Department.Size = new System.Drawing.Size(263, 47);
             this.Department.TabIndex = 1;
             this.Department.Text = "";
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.label21);
-            this.flowLayoutPanel7.Controls.Add(this.label24);
             this.flowLayoutPanel7.Controls.Add(this.Assignment_Number_Or_Exam);
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 4);
@@ -2187,7 +2153,7 @@
             // 
             this.Assignment_Number_Or_Exam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.Assignment_Number_Or_Exam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Assignment_Number_Or_Exam.Location = new System.Drawing.Point(922, 3);
+            this.Assignment_Number_Or_Exam.Location = new System.Drawing.Point(3, 16);
             this.Assignment_Number_Or_Exam.Name = "Assignment_Number_Or_Exam";
             this.Assignment_Number_Or_Exam.Size = new System.Drawing.Size(253, 47);
             this.Assignment_Number_Or_Exam.TabIndex = 1;
@@ -2615,12 +2581,13 @@
             this.richTextBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.richTextBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox25.Location = new System.Drawing.Point(-35, 1828);
+            this.richTextBox25.Location = new System.Drawing.Point(72, 1691);
             this.richTextBox25.Name = "richTextBox25";
             this.richTextBox25.ReadOnly = true;
-            this.richTextBox25.Size = new System.Drawing.Size(1095, 215);
+            this.richTextBox25.Size = new System.Drawing.Size(884, 215);
             this.richTextBox25.TabIndex = 45;
             this.richTextBox25.Text = resources.GetString("richTextBox25.Text");
+            this.richTextBox25.Visible = false;
             // 
             // label32
             // 
@@ -2647,7 +2614,7 @@
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.White;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(154, 0);
+            this.label24.Location = new System.Drawing.Point(10, 838);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(762, 40);
             this.label24.TabIndex = 47;
@@ -2780,6 +2747,38 @@
             this.listBox3.Size = new System.Drawing.Size(1032, 160);
             this.listBox3.TabIndex = 46;
             // 
+            // label30
+            // 
+            this.label30.Location = new System.Drawing.Point(958, 1535);
+            this.label30.Name = "label30";
+            this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label30.Size = new System.Drawing.Size(60, 14);
+            this.label30.TabIndex = 55;
+            this.label30.Text = "FSD21001";
+            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(883, 1259);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(45, 46);
+            this.button5.TabIndex = 54;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(883, 1346);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(45, 46);
+            this.button4.TabIndex = 53;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // Pages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2851,8 +2850,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panel0.ResumeLayout(false);
+            this.panel0.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel9.ResumeLayout(false);
             this.flowLayoutPanel9.PerformLayout();
@@ -2902,9 +2901,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         public System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
@@ -3043,7 +3039,7 @@
         private System.Windows.Forms.ListBox listBox6;
         private System.Windows.Forms.Button Form6;
         private System.Windows.Forms.Button Form5;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel0;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
@@ -3110,6 +3106,9 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

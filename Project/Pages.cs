@@ -625,26 +625,33 @@ namespace Project
             //panel3.Visible = true;
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void change( Button form , Panel panel)
         {
             treeView1.BringToFront();
-            panel1.AutoScroll = true;
-            panel1.Visible = true;
+            panel1.AutoScroll = false;
+            panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
 
-            Form1.BackColor = Color.Lime;
+            
+            panel.Visible = true;
 
+
+            Form1.BackColor = Color.LightSkyBlue;
             Form2.BackColor = Color.LightSkyBlue;
             Form3.BackColor = Color.LightSkyBlue;
             Form4.BackColor = Color.LightSkyBlue;
             Form5.BackColor = Color.LightSkyBlue;
             Form6.BackColor = Color.LightSkyBlue;
-            
 
+            form.BackColor = Color.Lime;
+        }
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.change(Form1, panel0);
 
         }
 
@@ -671,22 +678,7 @@ namespace Project
 
         private void button16_Click_1(object sender, EventArgs e)
         {
-            treeView1.BringToFront();
-            panel1.AutoScroll = false;
-            panel1.Visible = false;
-            panel2.Visible = true;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
-
-            Form2.BackColor = Color.Lime;
-
-            Form1.BackColor = Color.LightSkyBlue;
-            Form3.BackColor = Color.LightSkyBlue;
-            Form4.BackColor = Color.LightSkyBlue;
-            Form5.BackColor = Color.LightSkyBlue;
-            Form6.BackColor = Color.LightSkyBlue;
+            this.change(Form2, panel1);
 
         }
 

@@ -117,6 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label42.Text" xml:space="preserve">
+    <value>I,                                                                          (STUDENT NAME, TYPED or PRINTED) have been made aware of
+Academic Integrity Policy ED 5-0, as well as my alleged violation of this policy.
+I am aware that, as per Policy ED 5-0, I will be given an opportunity to make a written submission to the Academic Integrity
+Committee. If I feel there has been an error in the Academic Integrity process, I have the right to an appeal as per policies ED
+4-0 (Student Academic Appeals) and ED 5-0 (Student Academic Integrity).
+I am aware that I may contact the Office of Student Affairs for assistance. It has been explained to me that a record of this
+alleged violation will be placed in the Academic Integrity database and held confidentially in the Office of Student Affairs and
+that the only individuals who will have knowledge of my involvement in this occurrence will be the people signing this form,
+the Chairperson of the Academic Integrity Committee and the Director of Student Affairs.</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>    1. Read your case and evidence from the Faculty Member.
+    2. Please answer the following question by checking either “Yes” or “No.”
+    3. Enter the date.
+    4. Enter your digital signature by clicking the appropriate signature box by following the instructions in Adobe Reader or
+       Adobe Acrobat or sign the printed copy of the form. Make sure that you do not make any changes to the document
+       after you sign it.
+    5. Save this form to your computer and email it back to the Faculty Member within seven (7) days of receipt.
+    6.If this form is not returned within seven (7) days of receipt, the Faculty Member will proceed.</value>
+  </data>
   <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -133,30 +154,281 @@
   <metadata name="studentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="label25.Text" xml:space="preserve">
-    <value>Recommendations for sanction.
-Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
-remedial sanctions (such as resubmission, etc.), failure of course, and suspension. Please note that decisions 
-on cases are made by the Academic Integrity Committee. Please provide evidence on Page 4 if you are 
-recommending a specific sanction and this will be taken into consideration by the committee.
-When contacting the student to arrange a meeting to discuss this alleged violation, please ensure the student is 
-advised of the following: (please check these boxes when completed).
-The student is advised that they may bring a support person to the meeting between the student and instructor 
-at which the Case Report Form and all evidence will be reviewed by and presented to the student. 
-The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
-to aic@tru.ca.</value>
+  <data name="button12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AyjP/wIxmgRtd5VE1wAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="richTextBox25.Text" xml:space="preserve">
-    <value>   
-   Faculty Member:
-   1. Please fill out the form below. Include only one (1) student assignment or case in each form. Use multiple forms if the violation 
-       involves more than one student, or if a student is involved in multiple cases.
-   2. Provide comments and evidence at the end of this form highlighting the violation of ED 5-0. Submissions will not be accepted without 
-       evidence.
-   3. Complete a printed copy of the form or enter your digital signature by clicking the box at the bottom of this page and follow the 
-       instructions in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
-   4. Save the form to your computer as &lt;studentlastname_coursenumber_month_year.pdf&gt;.
-   5. Attach the form and evidence of the case to an email you will send to the student, or meet the student in person to complete the next step.</value>
+  <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAANdJREFUOE/NlDEKAjEQRQe0UltPoZ13UK9jo6AX8AJ2nmA7LRZ2J+teQESc0aNY
+        bKMk6hoSwQRG8MGvMvPChCQAf0PJHRMRkqQBSBtASqEsm+5yPIpXoPhmgrx2l+NQtKhldWjulsWDxCZi
+        RAmzSx+QJ6B45mW7b5maYCHyGJAr/5yeSQ/dR12oUBEC8hUKGsLuNPDyuibBQrtQN7tCnZxGZlPk3G33
+        sYV6PHfk9/2rzBRfsYXZsQ1ISy+KplCce27rZ4LPJhQx4U+elOij14h/SxrRj1OAO22K4A/UjWDTAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>     
+     When you receive this form back from the student please proceed with #1, below.
+     If you do not receive the form from the student within seven (7) days, please proceed with #2, below.
+     1. Check to ensure that the student has signed a printed copy of the form or entered their digital signature.
+     2. Sign the printed form or enter your digital signature by clicking the appropriate signature box below and following
+     the instructions in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document
+     after you sign it.
+     3. Save this form to your computer.
+     4. Forward this form to the Department Chair with a copy of the evidence, such as assignment or work in question
+     (PDF is preferred, but not necessary) within seven (7) days.</value>
+  </data>
+  <data name="richTextBox13.Text" xml:space="preserve">
+    <value>
+     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
+
+     Department Chair (or designate):
+     When you receive this form from the Faculty Member, complete the following:
+     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
+     2. Answer the question below.
+     3. Ensure that the evidence is attached.
+     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
+         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
+     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
+  </data>
+  <data name="richTextBox23.Text" xml:space="preserve">
+    <value>     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Dean. All
+     cases that reach the Academic Integrity Committee must have been forwarded from the Dean (or designate), rather than
+     from the Faculty Member.
+
+     Dean (or designate):
+     When you receive this form from the Department Chair, complete the following:
+     1. Check to ensure that the student, Faculty Member and Chair have entered their digital signatures or signed a printed
+         copy of the form.
+     2. Answer the questions below.
+     3. Ensure that the supporting evidence of the case is attached.
+     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions
+         in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
+     5. Save this form to your computer
+     6.Submit the case package within (7) days by emailing the case in one PDF file to aic@tru.ca, or sending the original printed
+        copy of the file to the Office of Student Affairs in OM 1631.</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -546,302 +818,30 @@ to aic@tru.ca.</value>
         YII=
 </value>
   </data>
-  <data name="label42.Text" xml:space="preserve">
-    <value>I,                                                                          (STUDENT NAME, TYPED or PRINTED) have been made aware of
-Academic Integrity Policy ED 5-0, as well as my alleged violation of this policy.
-I am aware that, as per Policy ED 5-0, I will be given an opportunity to make a written submission to the Academic Integrity
-Committee. If I feel there has been an error in the Academic Integrity process, I have the right to an appeal as per policies ED
-4-0 (Student Academic Appeals) and ED 5-0 (Student Academic Integrity).
-I am aware that I may contact the Office of Student Affairs for assistance. It has been explained to me that a record of this
-alleged violation will be placed in the Academic Integrity database and held confidentially in the Office of Student Affairs and
-that the only individuals who will have knowledge of my involvement in this occurrence will be the people signing this form,
-the Chairperson of the Academic Integrity Committee and the Director of Student Affairs.</value>
+  <data name="richTextBox25.Text" xml:space="preserve">
+    <value>   
+   Faculty Member:
+   1. Please fill out the form below. Include only one (1) student assignment or case in each form. Use multiple forms if the violation 
+       involves more than one student, or if a student is involved in multiple cases.
+   2. Provide comments and evidence at the end of this form highlighting the violation of ED 5-0. Submissions will not be accepted without 
+       evidence.
+   3. Complete a printed copy of the form or enter your digital signature by clicking the box at the bottom of this page and follow the 
+       instructions in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
+   4. Save the form to your computer as &lt;studentlastname_coursenumber_month_year.pdf&gt;.
+   5. Attach the form and evidence of the case to an email you will send to the student, or meet the student in person to complete the next step.</value>
   </data>
-  <data name="richTextBox6.Text" xml:space="preserve">
-    <value>    1. Read your case and evidence from the Faculty Member.
-    2. Please answer the following question by checking either “Yes” or “No.”
-    3. Enter the date.
-    4. Enter your digital signature by clicking the appropriate signature box by following the instructions in Adobe Reader or
-       Adobe Acrobat or sign the printed copy of the form. Make sure that you do not make any changes to the document
-       after you sign it.
-    5. Save this form to your computer and email it back to the Faculty Member within seven (7) days of receipt.
-    6.If this form is not returned within seven (7) days of receipt, the Faculty Member will proceed.</value>
-  </data>
-  <data name="richTextBox23.Text" xml:space="preserve">
-    <value>     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Dean. All
-     cases that reach the Academic Integrity Committee must have been forwarded from the Dean (or designate), rather than
-     from the Faculty Member.
-
-     Dean (or designate):
-     When you receive this form from the Department Chair, complete the following:
-     1. Check to ensure that the student, Faculty Member and Chair have entered their digital signatures or signed a printed
-         copy of the form.
-     2. Answer the questions below.
-     3. Ensure that the supporting evidence of the case is attached.
-     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions
-         in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
-     5. Save this form to your computer
-     6.Submit the case package within (7) days by emailing the case in one PDF file to aic@tru.ca, or sending the original printed
-        copy of the file to the Office of Student Affairs in OM 1631.</value>
-  </data>
-  <data name="richTextBox13.Text" xml:space="preserve">
-    <value>
-     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
-
-     Department Chair (or designate):
-     When you receive this form from the Faculty Member, complete the following:
-     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
-     2. Answer the question below.
-     3. Ensure that the evidence is attached.
-     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
-         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
-     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
-  </data>
-  <data name="richTextBox2.Text" xml:space="preserve">
-    <value>     
-     When you receive this form back from the student please proceed with #1, below.
-     If you do not receive the form from the student within seven (7) days, please proceed with #2, below.
-     1. Check to ensure that the student has signed a printed copy of the form or entered their digital signature.
-     2. Sign the printed form or enter your digital signature by clicking the appropriate signature box below and following
-     the instructions in Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document
-     after you sign it.
-     3. Save this form to your computer.
-     4. Forward this form to the Department Chair with a copy of the evidence, such as assignment or work in question
-     (PDF is preferred, but not necessary) within seven (7) days.</value>
-  </data>
-  <data name="button12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        AyjP/wIxmgRtd5VE1wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAANdJREFUOE/NlDEKAjEQRQe0UltPoZ13UK9jo6AX8AJ2nmA7LRZ2J+teQESc0aNY
-        bKMk6hoSwQRG8MGvMvPChCQAf0PJHRMRkqQBSBtASqEsm+5yPIpXoPhmgrx2l+NQtKhldWjulsWDxCZi
-        RAmzSx+QJ6B45mW7b5maYCHyGJAr/5yeSQ/dR12oUBEC8hUKGsLuNPDyuibBQrtQN7tCnZxGZlPk3G33
-        sYV6PHfk9/2rzBRfsYXZsQ1ISy+KplCce27rZ4LPJhQx4U+elOij14h/SxrRj1OAO22K4A/UjWDTAAAA
-        AElFTkSuQmCC
-</value>
+  <data name="label25.Text" xml:space="preserve">
+    <value>Recommendations for sanction.
+Typical sanctions include reprimand, reduction of grade by a specific percentage, zero for assignment/exam, 
+remedial sanctions (such as resubmission, etc.), failure of course, and suspension. Please note that decisions 
+on cases are made by the Academic Integrity Committee. Please provide evidence on Page 4 if you are 
+recommending a specific sanction and this will be taken into consideration by the committee.
+When contacting the student to arrange a meeting to discuss this alleged violation, please ensure the student is 
+advised of the following: (please check these boxes when completed).
+The student is advised that they may bring a support person to the meeting between the student and instructor 
+at which the Case Report Form and all evidence will be reviewed by and presented to the student. 
+The student is advised that they may submit a written statement to the Academic Integrity Committee by email 
+to aic@tru.ca.</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
