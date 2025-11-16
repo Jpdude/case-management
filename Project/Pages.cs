@@ -27,6 +27,7 @@ namespace Project
         {
             Students = GetStudents();
             InitializeComponent();
+            this.KeyPreview = true;
         }
 
 
@@ -55,7 +56,7 @@ namespace Project
                     Department = rec.Value.Department,
                     Term_Or_Semester = rec.Value.Term_Or_Semester,
                     Description_Violation = rec.Value.Description_Violation,
-                    Description_Violation_1 = rec.Value.Description_Violation_1,
+                   
                     Faculty_Member_Name = rec.Value.Faculty_Member_Name,
 
                     Step_One_Date_1 = rec.Value.Step_One_Date_1,
@@ -83,7 +84,7 @@ namespace Project
                     If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
                     Step5_Date = rec.Value.Step5_Date,
                     Faculty_Comments = rec.Value.Faculty_Comments,
-                    Student_Comments_Page5 = rec.Value.Student_Comments_Page5,
+                 
                     OSA_Use_Only = rec.Value.OSA_Use_Only
 
                 });
@@ -446,6 +447,18 @@ namespace Project
                 button_dept_n.Enabled = false;
                 dean_y.Enabled = false;
                 dean_n.Enabled = false;
+
+                button11.Enabled = false;
+                button10.Enabled = false;
+                groupBox2.Enabled = false;
+                button20.Enabled = false;
+                button19.Enabled = false;
+                button9.Enabled = false;
+                button8.Enabled = false;
+
+                button11.BackColor = Color.LightGray;
+                //button11.FlatStyle = FlatStyle.Flat;
+                button11.FlatAppearance.BorderColor = Color.DarkGray;
             }
             else
             {
@@ -457,6 +470,22 @@ namespace Project
                 button_dept_n.Enabled = true;
                 dean_y.Enabled = true;
                 dean_n.Enabled = true;
+
+                button11.Enabled = true;
+                button10.Enabled = true;
+                groupBox2.Enabled = true;
+                button20.Enabled = true;
+                button19.Enabled = true;
+                button9.Enabled = true;
+                button8.Enabled = true;
+
+                //Changing the color of the Add/Edit to original calling this twice will set the color apportiately instead of me having to check and set the color myself
+                button11.PerformClick();
+                button11.PerformClick();
+
+
+
+
 
             }
 
@@ -712,11 +741,19 @@ namespace Project
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            if (groupBox1.Text == "Add")
-                this.update("add");
+            if (checkBox1.Checked == true)
+            {
+                if (groupBox1.Text == "Add")
+                    this.update("add");
 
-            if (groupBox1.Text == "Edit")
-                this.update("edit");
+                else if (groupBox1.Text == "Edit")
+                    this.update("edit");
+            }
+            else
+            {
+                MessageBox.Show("Please make sure you have enabled the operation before saving");
+            }
+
 
         }
 
@@ -986,6 +1023,23 @@ namespace Project
         private void dean_n_Click(object sender, EventArgs e)
         {
             changeBtn(dean_n, dean_y);
+        }
+
+        private void Pages_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.S && e.Control) // Ctrl + S
+            {
+                
+                MessageBox.Show("Save action triggered!");
+                e.Handled = true; 
+            }else if (e.KeyCode == Keys.N)
+            {
+                nextOrnot(-1);
+            }
+            else if (e.KeyCode == Keys.B)
+            {
+                nextOrnot(1);
+            }
         }
     }
 }

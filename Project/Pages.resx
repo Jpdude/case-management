@@ -117,19 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox13.Text" xml:space="preserve">
-    <value>
-     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
-
-     Department Chair (or designate):
-     When you receive this form from the Faculty Member, complete the following:
-     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
-     2. Answer the question below.
-     3. Ensure that the evidence is attached.
-     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
-         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
-     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
-  </data>
   <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -584,6 +571,19 @@ to aic@tru.ca.</value>
      5. Save this form to your computer
      6.Submit the case package within (7) days by emailing the case in one PDF file to aic@tru.ca, or sending the original printed
         copy of the file to the Office of Student Affairs in OM 1631.</value>
+  </data>
+  <data name="richTextBox13.Text" xml:space="preserve">
+    <value>
+     All cases in which the Academic Integrity Policy is alleged to have been breached shall be reviewed by the Department Chair.
+
+     Department Chair (or designate):
+     When you receive this form from the Faculty Member, complete the following:
+     1. Check to ensure that both the student and Faculty Member have entered their signatures or signed a printed form.
+     2. Answer the question below.
+     3. Ensure that the evidence is attached.
+     4. Sign the printed form or enter your digital signature by clicking the appropriate signature box and follow the instructions in
+         Adobe Reader or Adobe Acrobat. Make sure that you do not make any changes to the document after you sign it.
+     5. Save this form to your computer and forward it and any email attachments, to the Dean within seven (7) days.</value>
   </data>
   <data name="richTextBox2.Text" xml:space="preserve">
     <value>     

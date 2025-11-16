@@ -17,7 +17,7 @@ namespace Project
         public string Department { get; set; }
         public string Term_Or_Semester { get; set; }
         public string Description_Violation { get; set; }
-        public string Description_Violation_1 { get; set; }
+        
         public string Faculty_Member_Name { get; set; }
 
         public string Step_One_Date { get; set; }
@@ -34,7 +34,7 @@ namespace Project
         public string MyTRU_Email { get; set; }
         public string Step2_Date { get; set; }
         public string Student_Agreement { get; set; }
-        public string Student_Comments { get; set; }
+        
         public string Faculty_Member_Name_2 { get; set; }
         public string Date_Step3 { get; set; }
         public string Department_Chair_Name { get; set; }
@@ -48,7 +48,7 @@ namespace Project
         public string If_Agree_No_Explain_Step5 { get; set; }
         public string Step5_Date { get; set; }
         public string Faculty_Comments { get; set; }
-        public string Student_Comments_Page5 { get; set; }
+        public string Student_Comments { get; set; }
         public string OSA_Use_Only { get; set; }
 
     }
