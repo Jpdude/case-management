@@ -15,8 +15,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+//using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Project
 {
@@ -159,7 +160,11 @@ namespace Project
                                 if (ctrl3.GetType().Name == "RichTextBox")
                                 {
                                     Console.WriteLine("Sub: " + ctrl3.Name);
-                                    treeView1.Nodes[num].Nodes.Add(ctrl3.Name);
+                                    if (!(ctrl3.Name).Contains("richTextBox"))
+                                    {
+                                        treeView1.Nodes[num].Nodes.Add(ctrl3.Name);
+                                    }
+
                                 }
                             }
                         }
@@ -171,7 +176,11 @@ namespace Project
                 else if (ctrl.GetType().Name == "RichTextBox")
                 {
                     Console.WriteLine("Main: " + ctrl.Name);
-                    treeView1.Nodes[num].Nodes.Add(ctrl.Name);
+                    if (!(ctrl.Name).Contains("richTextBox"))
+                    {
+                        treeView1.Nodes[num].Nodes.Add(ctrl.Name);
+                    }
+
                 }
             }
         }
@@ -1127,7 +1136,7 @@ namespace Project
             if (button1.Text == ">")
             {
                 button1.Text = "<";
-                Size s = new Size(184, 783);
+                Size s = new Size(200, 783);
                 treeView1.Size = s;
             }
             else
@@ -1141,6 +1150,7 @@ namespace Project
 
         private void treeView1_AfterSelect_2(object sender, TreeViewEventArgs e)
         {
+            //This is as far as I'm going... I have a life to live T_T
             RichTextBox tbx = this.Controls.Find(e.Node.Text, true).FirstOrDefault() as RichTextBox;
             Button b = this.Controls.Find(e.Node.Text, true).FirstOrDefault() as Button;
             Console.WriteLine(e.Node.Text);
