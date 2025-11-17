@@ -26,7 +26,9 @@ namespace Project
         public List<Student> Students { get; set; }
         public int id;
         public Color modify_clr = Color.LightGray;
+        public Color main_clr = Color.LightSlateGray;
         public Button curr_form;
+
         public Pages()
         {
             Students = GetStudents();
@@ -929,13 +931,13 @@ namespace Project
             panel.Visible = true;
             //panel.BringToFront();
 
-            Form1.BackColor = Color.LightSkyBlue;
-            Form2.BackColor = Color.LightSkyBlue;
-            Form3.BackColor = Color.LightSkyBlue;
-            Form4.BackColor = Color.LightSkyBlue;
-            Form5.BackColor = Color.LightSkyBlue;
-            Form6.BackColor = Color.LightSkyBlue;
-            Form7.BackColor = Color.LightSkyBlue;
+            Form1.BackColor = main_clr;
+            Form2.BackColor = main_clr;
+            Form3.BackColor = main_clr;
+            Form4.BackColor = main_clr;
+            Form5.BackColor = main_clr;
+            Form6.BackColor = main_clr;
+            Form7.BackColor = main_clr;
 
             Console.WriteLine(panel.Name);
             form.BackColor = modify_clr;

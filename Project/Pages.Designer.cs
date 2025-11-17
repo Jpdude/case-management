@@ -38,11 +38,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label29 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel0 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -112,6 +112,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.richTextBox27 = new System.Windows.Forms.RichTextBox();
             this.label53 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -149,7 +150,6 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
@@ -247,7 +247,6 @@
             this.Form1 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -261,7 +260,6 @@
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel0.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -313,7 +311,6 @@
             // 
             this.tabControl1.AllowDrop = true;
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(117, 1);
             this.tabControl1.Name = "tabControl1";
@@ -367,7 +364,7 @@
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dataGridView1.DataSource = this.studentBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 173);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
@@ -388,31 +385,6 @@
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
             this.Delete.Name = "Delete";
             // 
-            // tabPage1
-            // 
-            this.tabPage1.AllowDrop = true;
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1155, 802);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Information";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(517, 19267);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 13);
-            this.label29.TabIndex = 32;
-            this.label29.Text = "PAGE 1 of 5";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.button1);
@@ -429,8 +401,22 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1155, 802);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Case";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(67, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(10, 18);
+            this.button1.TabIndex = 56;
+            this.button1.Text = ">";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // treeView1
             // 
@@ -442,7 +428,7 @@
             // 
             // panel0
             // 
-            this.panel0.AutoScroll = true;
+            this.panel0.Controls.Add(this.richTextBox1);
             this.panel0.Controls.Add(this.label30);
             this.panel0.Controls.Add(this.button5);
             this.panel0.Controls.Add(this.button4);
@@ -480,6 +466,15 @@
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(1069, 806);
             this.panel0.TabIndex = 55;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(252, 1559);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(463, 173);
+            this.richTextBox1.TabIndex = 56;
+            this.richTextBox1.Text = "";
             // 
             // label30
             // 
@@ -574,7 +569,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.86636F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.13364F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 385F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 395F));
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel11, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel12, 0, 0);
@@ -591,7 +586,7 @@
             this.flowLayoutPanel10.Controls.Add(this.label26);
             this.flowLayoutPanel10.Controls.Add(this.Step_One_Date_1);
             this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(615, 4);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(605, 4);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(304, 67);
             this.flowLayoutPanel10.TabIndex = 26;
@@ -621,9 +616,9 @@
             this.flowLayoutPanel11.Controls.Add(this.label27);
             this.flowLayoutPanel11.Controls.Add(this.Faculty_Member_Name_1);
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(229, 4);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(226, 4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(379, 67);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(372, 67);
             this.flowLayoutPanel11.TabIndex = 25;
             // 
             // label27
@@ -652,7 +647,7 @@
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(218, 67);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(215, 67);
             this.flowLayoutPanel12.TabIndex = 24;
             // 
             // label28
@@ -680,7 +675,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.47059F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.52941F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 591F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 601F));
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel7, 0, 0);
@@ -697,7 +692,7 @@
             this.flowLayoutPanel9.Controls.Add(this.label23);
             this.flowLayoutPanel9.Controls.Add(this.Term_Or_Semester);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(412, 4);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(402, 4);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(524, 67);
             this.flowLayoutPanel9.TabIndex = 26;
@@ -727,9 +722,9 @@
             this.flowLayoutPanel8.Controls.Add(this.label22);
             this.flowLayoutPanel8.Controls.Add(this.Department);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(214, 4);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(209, 4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(191, 67);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(186, 67);
             this.flowLayoutPanel8.TabIndex = 25;
             // 
             // label22
@@ -759,7 +754,7 @@
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(203, 67);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(198, 67);
             this.flowLayoutPanel7.TabIndex = 24;
             // 
             // label21
@@ -788,10 +783,10 @@
             this.richTextBox25.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox25.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox25.Location = new System.Drawing.Point(0, 1549);
+            this.richTextBox25.Location = new System.Drawing.Point(0, 770);
             this.richTextBox25.Name = "richTextBox25";
             this.richTextBox25.ReadOnly = true;
-            this.richTextBox25.Size = new System.Drawing.Size(1052, 36);
+            this.richTextBox25.Size = new System.Drawing.Size(1069, 36);
             this.richTextBox25.TabIndex = 45;
             this.richTextBox25.Text = "";
             this.richTextBox25.Visible = false;
@@ -803,7 +798,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.54369F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.45631F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 687F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel6, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 1);
@@ -823,9 +818,9 @@
             this.flowLayoutPanel5.Controls.Add(this.label19);
             this.flowLayoutPanel5.Controls.Add(this.Step_One_Date);
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(160, 81);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(155, 81);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(159, 68);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(154, 68);
             this.flowLayoutPanel5.TabIndex = 23;
             // 
             // label19
@@ -853,7 +848,7 @@
             this.flowLayoutPanel6.Controls.Add(this.label20);
             this.flowLayoutPanel6.Controls.Add(this.Course_Name_Number);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(326, 81);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(316, 81);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(628, 68);
             this.flowLayoutPanel6.TabIndex = 23;
@@ -885,7 +880,7 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(4, 81);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(149, 68);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(144, 68);
             this.flowLayoutPanel4.TabIndex = 23;
             // 
             // label18
@@ -913,7 +908,7 @@
             this.flowLayoutPanel3.Controls.Add(this.label17);
             this.flowLayoutPanel3.Controls.Add(this.Student_Email);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(326, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(316, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(626, 68);
             this.flowLayoutPanel3.TabIndex = 24;
@@ -943,9 +938,9 @@
             this.flowLayoutPanel2.Controls.Add(this.label16);
             this.flowLayoutPanel2.Controls.Add(this.Student_Number);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(160, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(155, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(159, 68);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(154, 68);
             this.flowLayoutPanel2.TabIndex = 23;
             // 
             // label16
@@ -975,7 +970,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(149, 68);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(144, 68);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // label15
@@ -1217,6 +1212,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.richTextBox7);
             this.panel1.Controls.Add(this.richTextBox27);
             this.panel1.Controls.Add(this.label53);
             this.panel1.Controls.Add(this.label46);
@@ -1246,12 +1242,20 @@
             this.panel1.Controls.Add(this.label35);
             this.panel1.Controls.Add(this.label34);
             this.panel1.Controls.Add(this.label33);
-            this.panel1.Controls.Add(this.richTextBox5);
             this.panel1.Location = new System.Drawing.Point(83, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1069, 806);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Location = new System.Drawing.Point(258, 1029);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.Size = new System.Drawing.Size(463, 201);
+            this.richTextBox7.TabIndex = 57;
+            this.richTextBox7.Text = "";
             // 
             // richTextBox27
             // 
@@ -1666,15 +1670,6 @@
             this.label33.Text = "Step Two -";
             this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(449, 1074);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(100, 88);
-            this.richTextBox5.TabIndex = 0;
-            this.richTextBox5.Text = "";
-            this.richTextBox5.Visible = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel7);
@@ -1709,7 +1704,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.29585F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.70415F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 337F));
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel18, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel19, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel20, 0, 0);
@@ -1726,7 +1721,7 @@
             this.flowLayoutPanel18.Controls.Add(this.label71);
             this.flowLayoutPanel18.Controls.Add(this.Date_Step4);
             this.flowLayoutPanel18.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(669, 4);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(659, 4);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(260, 67);
             this.flowLayoutPanel18.TabIndex = 26;
@@ -1756,9 +1751,9 @@
             this.flowLayoutPanel19.Controls.Add(this.label72);
             this.flowLayoutPanel19.Controls.Add(this.Department_Chair_Name);
             this.flowLayoutPanel19.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(385, 4);
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(379, 4);
             this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(277, 67);
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(273, 67);
             this.flowLayoutPanel19.TabIndex = 25;
             // 
             // label72
@@ -1787,7 +1782,7 @@
             this.flowLayoutPanel20.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel20.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel20.Name = "flowLayoutPanel20";
-            this.flowLayoutPanel20.Size = new System.Drawing.Size(374, 67);
+            this.flowLayoutPanel20.Size = new System.Drawing.Size(368, 67);
             this.flowLayoutPanel20.TabIndex = 24;
             // 
             // label73
@@ -2019,7 +2014,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.29585F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.70415F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 337F));
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel22, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel23, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel24, 0, 0);
@@ -2036,7 +2031,7 @@
             this.flowLayoutPanel22.Controls.Add(this.label74);
             this.flowLayoutPanel22.Controls.Add(this.Step5_Date);
             this.flowLayoutPanel22.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel22.Location = new System.Drawing.Point(669, 4);
+            this.flowLayoutPanel22.Location = new System.Drawing.Point(659, 4);
             this.flowLayoutPanel22.Name = "flowLayoutPanel22";
             this.flowLayoutPanel22.Size = new System.Drawing.Size(273, 67);
             this.flowLayoutPanel22.TabIndex = 26;
@@ -2066,9 +2061,9 @@
             this.flowLayoutPanel23.Controls.Add(this.label75);
             this.flowLayoutPanel23.Controls.Add(this.Dean_Name);
             this.flowLayoutPanel23.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel23.Location = new System.Drawing.Point(385, 4);
+            this.flowLayoutPanel23.Location = new System.Drawing.Point(379, 4);
             this.flowLayoutPanel23.Name = "flowLayoutPanel23";
-            this.flowLayoutPanel23.Size = new System.Drawing.Size(277, 67);
+            this.flowLayoutPanel23.Size = new System.Drawing.Size(273, 67);
             this.flowLayoutPanel23.TabIndex = 25;
             // 
             // label75
@@ -2097,7 +2092,7 @@
             this.flowLayoutPanel24.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel24.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel24.Name = "flowLayoutPanel24";
-            this.flowLayoutPanel24.Size = new System.Drawing.Size(374, 67);
+            this.flowLayoutPanel24.Size = new System.Drawing.Size(368, 67);
             this.flowLayoutPanel24.TabIndex = 24;
             // 
             // label76
@@ -2395,7 +2390,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.42956F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.57044F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel13, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel16, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel17, 0, 0);
@@ -2412,7 +2407,7 @@
             this.flowLayoutPanel13.Controls.Add(this.label58);
             this.flowLayoutPanel13.Controls.Add(this.Date_Step3);
             this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(738, 4);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(728, 4);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
             this.flowLayoutPanel13.Size = new System.Drawing.Size(221, 67);
             this.flowLayoutPanel13.TabIndex = 26;
@@ -2442,9 +2437,9 @@
             this.flowLayoutPanel16.Controls.Add(this.label59);
             this.flowLayoutPanel16.Controls.Add(this.Faculty_Member_Name_2);
             this.flowLayoutPanel16.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(433, 4);
+            this.flowLayoutPanel16.Location = new System.Drawing.Point(427, 4);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
-            this.flowLayoutPanel16.Size = new System.Drawing.Size(298, 67);
+            this.flowLayoutPanel16.Size = new System.Drawing.Size(294, 67);
             this.flowLayoutPanel16.TabIndex = 25;
             // 
             // label59
@@ -2473,7 +2468,7 @@
             this.flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel17.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
-            this.flowLayoutPanel17.Size = new System.Drawing.Size(422, 67);
+            this.flowLayoutPanel17.Size = new System.Drawing.Size(416, 67);
             this.flowLayoutPanel17.TabIndex = 24;
             // 
             // label60
@@ -2568,7 +2563,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.LightSlateGray;
             this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Location = new System.Drawing.Point(10, 111);
@@ -2765,20 +2760,6 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(67, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(10, 18);
-            this.button1.TabIndex = 56;
-            this.button1.Text = ">";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -2850,7 +2831,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1276, 828);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
@@ -2871,8 +2852,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.panel0.ResumeLayout(false);
             this.panel0.PerformLayout();
@@ -2968,7 +2947,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
-        public System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button10;
@@ -3028,7 +3006,6 @@
         private System.Windows.Forms.RichTextBox MyTRU_Email;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
@@ -3108,7 +3085,6 @@
         private System.Windows.Forms.Button Form6;
         private System.Windows.Forms.Button Form5;
         private System.Windows.Forms.Panel panel0;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label23;
@@ -3180,6 +3156,8 @@
         private System.Windows.Forms.Button Form7;
         private System.Windows.Forms.RichTextBox richTextBox27;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox7;
     }
 }
 
