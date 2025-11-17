@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,36 +128,53 @@ namespace Project
             treeView1.Nodes.Add("Form7");
             int i;
             Console.WriteLine("Hkh");
-            //Recursion is never a good idea but fk it we balll
-            foreach ( Control ctrl in panel0.Controls)
-            {
-                //Console.WriteLine("Not txt"+ctrl.Text);
-                Console.WriteLine("Type: " + ctrl.GetType().Name);
-                if (ctrl.GetType().Name == "TableLayoutPanel" || ctrl.GetType().Name == "ListBox")
-                {
-                    
-                    
-                    foreach (Control panel in ctrl.Controls)
-                    {
-                        //Console.WriteLine("Not txt" + panel.GetType().Name);
-                        if (panel.GetType().Name == "FlowLayoutPanel")
-                        {
-                            foreach (Control lbl in panel.Controls)
-                            {
-                                //Console.WriteLine("Bruh" + lbl.GetType().Name);
-                                if (lbl.GetType().Name == "Label")
-                                {
-                                    Console.WriteLine("Not txt" + lbl.Text);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            populate(panel0,0);
+            populate(panel1,1);
+            populate(panel2,2);
+            populate(panel3,3);
+            populate(panel4,4);
+            populate(panel5,5);
+            populate(panel6,6);
+            
+
 
         }
 
-        
+        public void populate( Panel p , int num)
+        {
+            Console.WriteLine("--------------------------" + p + "-----------------------------------");
+            //Recursion is never a good idea but fk it we balll
+            foreach (Control ctrl in p.Controls)
+            {
+                //Console.WriteLine("Not txt"+ctrl.Text);
+                //Console.WriteLine("Type: " + ctrl.GetType().Name);
+                if (ctrl.GetType().Name == "TableLayoutPanel")
+                {
+                    foreach (Control ctrl2 in ctrl.Controls)
+                    {
+                        if (ctrl2.GetType().Name == "FlowLayoutPanel")
+                        {
+                            foreach (Control ctrl3 in ctrl2.Controls)
+                            {
+                                if (ctrl3.GetType().Name == "RichTextBox")
+                                {
+                                    Console.WriteLine("Sub: " + ctrl3.Name);
+                                    treeView1.Nodes[num].Nodes.Add(ctrl3.Name);
+                                }
+                            }
+                        }
+
+
+                    }
+
+                }
+                else if (ctrl.GetType().Name == "RichTextBox")
+                {
+                    Console.WriteLine("Main: " + ctrl.Name);
+                    treeView1.Nodes[num].Nodes.Add(ctrl.Name);
+                }
+            }
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
