@@ -24,10 +24,12 @@ namespace Project
         public List<Student> Students { get; set; }
         public int id;
         public Color modify_clr = Color.LightGray;
+        public Button curr_form;
         public Pages()
         {
             Students = GetStudents();
             InitializeComponent();
+            curr_form = Form1;
             this.KeyPreview = true;
         }
 
@@ -107,7 +109,6 @@ namespace Project
             panel6.Visible = false;
             var students = this.Students;
             dataGridView1.DataSource = students;
-            treeView1.Nodes.Add("poop");
             int last = dataGridView1.ColumnCount - 1;
             DataGridViewCellStyle specificCellStyle = new DataGridViewCellStyle();
             specificCellStyle.BackColor = System.Drawing.Color.FromArgb(150,0,10);
@@ -117,6 +118,42 @@ namespace Project
                 row.Cells[last].Style.ApplyStyle(specificCellStyle);
 
             }
+            treeView1.Nodes.Add("Form1");
+            treeView1.Nodes.Add("Form2");
+            treeView1.Nodes.Add("Form3");
+            treeView1.Nodes.Add("Form4");
+            treeView1.Nodes.Add("Form5");
+            treeView1.Nodes.Add("Form6");
+            treeView1.Nodes.Add("Form7");
+            int i;
+            Console.WriteLine("Hkh");
+            //Recursion is never a good idea but fk it we balll
+            foreach ( Control ctrl in panel0.Controls)
+            {
+                //Console.WriteLine("Not txt"+ctrl.Text);
+                Console.WriteLine("Type: " + ctrl.GetType().Name);
+                if (ctrl.GetType().Name == "TableLayoutPanel" || ctrl.GetType().Name == "ListBox")
+                {
+                    
+                    
+                    foreach (Control panel in ctrl.Controls)
+                    {
+                        //Console.WriteLine("Not txt" + panel.GetType().Name);
+                        if (panel.GetType().Name == "FlowLayoutPanel")
+                        {
+                            foreach (Control lbl in panel.Controls)
+                            {
+                                //Console.WriteLine("Bruh" + lbl.GetType().Name);
+                                if (lbl.GetType().Name == "Label")
+                                {
+                                    Console.WriteLine("Not txt" + lbl.Text);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         
@@ -252,17 +289,17 @@ namespace Project
             using (Process pro = Process.Start(start))
             {
                 string result = pro.StandardOutput.ReadToEnd();
-                Console.WriteLine("result"+ result);
+                //Console.WriteLine("result"+ result);
                 res = result;
                 string err = pro.StandardError.ReadToEnd();
-                Console.WriteLine(result);
-                Console.WriteLine("errr"+err);
+                //Console.WriteLine(result);
+                //Console.WriteLine("errr"+err);
             }
             //Console.ReadKey();
-            Console.WriteLine("result", res);
+            //Console.WriteLine("result", res);
             if (res.Trim() == "OK" )
             {
-                Console.WriteLine("INNN");
+                //Console.WriteLine("INNN");
                 this.Students = GetStudents();//or i could just edit student object directly( would be faster)
                 dataGridView1.DataSource = this.Students;
                 return true;
@@ -275,15 +312,15 @@ namespace Project
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine(e.ColumnIndex);
+            //Console.WriteLine(e.ColumnIndex);
             
 
 
             if (e.ColumnIndex == 9)
             {
                 String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                Console.WriteLine("DELETE");
-                Console.WriteLine(this.run($"delete {ID}"));
+                //Console.WriteLine("DELETE");
+                //Console.WriteLine(this.run($"delete {ID}"));
 
             }
 
@@ -454,8 +491,11 @@ namespace Project
                 modify_clr = Color.LightGray;
 
                 // Did this to reset the colors
-                button19.PerformClick();
-                button20.PerformClick();
+                //button19.PerformClick();
+                //button20.PerformClick(); // Abort this causes weird problems and lag
+
+                // Choose the lazy route and made a global variable instead 
+                curr_form.BackColor = modify_clr;
 
 
                 button9.Enabled = false;
@@ -478,14 +518,16 @@ namespace Project
 
                 button11.Enabled = true;
                 button10.Enabled = true;
-               
                 
+
+
                 button9.Enabled = true;
                 button8.Enabled = true;
 
                 //Changing the color of the Add/Edit to original calling this twice will set the color apportiately instead of me having to check and set the color myself
                 button10.PerformClick();
                 button10.PerformClick();
+                
 
 
 
@@ -711,7 +753,7 @@ namespace Project
 
                 writer.WriteLine(text);
             writer.Close();
-            Console.WriteLine(text);
+            //Console.WriteLine(text);
             //String text = richTextBox2.Text;
             //StreamWriter write = new StreamWriter("update.txt");
             //write.WriteLine(text);
@@ -821,9 +863,10 @@ namespace Project
                 groupBox1.Text = "Add";
 
             }
-            
+            curr_form.BackColor = modify_clr;
 
-            
+
+
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -867,7 +910,7 @@ namespace Project
             Form6.BackColor = Color.LightSkyBlue;
             Form7.BackColor = Color.LightSkyBlue;
 
-            form.BackColor = Color.Lime;
+            form.BackColor = modify_clr;
             treeView1.BringToFront();
         }
         private void button13_Click(object sender, EventArgs e)
@@ -962,7 +1005,7 @@ namespace Project
                 Console.WriteLine(ctrl.Text);
                 Console.WriteLine(ctrl.BackColor);
                 Console.WriteLine(i);
-                if (ctrl.BackColor == modify_clr)
+                if (ctrl.BackColor == Color.LightGray || ctrl.BackColor == Color.Lime || ctrl.BackColor == Color.Blue )
                 {
                     if (i == 0 && num == -1)
                     {
@@ -975,6 +1018,7 @@ namespace Project
 
 
                     ctrl = (Button)coll[i + num];
+                    curr_form = ctrl;
                     ctrl.PerformClick();
                     Console.WriteLine(ctrl.Text);
                     Console.WriteLine(ctrl.BackColor);
@@ -1046,6 +1090,11 @@ namespace Project
             {
                 nextOrnot(1);
             }
+        }
+
+        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }
