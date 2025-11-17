@@ -928,8 +928,15 @@ namespace Project
             Form6.BackColor = Color.LightSkyBlue;
             Form7.BackColor = Color.LightSkyBlue;
 
+            Console.WriteLine(panel.Name);
             form.BackColor = modify_clr;
+            String p = Char.ToString((panel.Name)[5]);
+
+            treeView1.CollapseAll();
+            Console.WriteLine(p);
             treeView1.BringToFront();
+            treeView1.Nodes[int.Parse(p)].Expand();
+            button1.BringToFront();
         }
         private void button13_Click(object sender, EventArgs e)
         {
@@ -1112,6 +1119,41 @@ namespace Project
 
         private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (button1.Text == ">")
+            {
+                button1.Text = "<";
+                Size s = new Size(184, 783);
+                treeView1.Size = s;
+            }
+            else
+            {
+                button1.Text = ">";
+                Size s = new Size(84, 783);
+                treeView1.Size = s;
+            }
+            
+        }
+
+        private void treeView1_AfterSelect_2(object sender, TreeViewEventArgs e)
+        {
+            RichTextBox tbx = this.Controls.Find(e.Node.Text, true).FirstOrDefault() as RichTextBox;
+            Button b = this.Controls.Find(e.Node.Text, true).FirstOrDefault() as Button;
+            Console.WriteLine(e.Node.Text);
+            if (tbx != null)
+            {
+                tbx.Focus();
+                tbx.Select();
+            }
+
+            if (b != null)
+            {
+                b.PerformClick();
+            }
 
         }
     }
