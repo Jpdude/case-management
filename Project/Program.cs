@@ -34,6 +34,7 @@ namespace Project
             }
             catch
             {
+                read.Close();
                 Application.Run(new Auth());
             }
             

@@ -121,7 +121,11 @@ namespace Project
                 write.WriteLine(username);
                 write.Close();
             }
-              
+
+            MessageBox.Show("Wrong Credentials");
+            write.Close();
+
+
 
         }
     }

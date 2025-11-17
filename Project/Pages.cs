@@ -1196,13 +1196,14 @@ namespace Project
             {
                 nextOrnot(1);
                 e.Handled = true;
+            }else if (e.KeyCode == Keys.C && e.Control)
+            {
+                button10.PerformClick();
+                e.Handled = true;
             }
         }
 
-        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
-        {
-
-        }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
