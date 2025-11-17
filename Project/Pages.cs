@@ -1243,8 +1243,8 @@ namespace Project
         private void button6_Click(object sender, EventArgs e)
         {
             
-            Auth auth = new Auth();
-            auth.Show();
+            //Auth auth = new Auth();
+            //auth.Show();
             StreamWriter write = new StreamWriter("sess.txt", false);
             write.Write("");
             write.Close();
