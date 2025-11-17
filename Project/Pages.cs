@@ -28,13 +28,26 @@ namespace Project
         public Color modify_clr = Color.LightGray;
         public Color main_clr = Color.LightSlateGray;
         public Button curr_form;
+        public string acc;
+        public string stud_id;
 
-        public Pages()
+        public Pages( string acct , string id)
         {
+            this.acc = acct;
+            this.stud_id = id;
             Students = GetStudents();
             InitializeComponent();
             curr_form = Form1;
             this.KeyPreview = true;
+            
+
+            if (acct == "student")
+            {
+                button11.Visible = false;
+                button10.Visible = false;
+                groupBox1.Visible = false;
+                
+            }
         }
 
 
@@ -51,52 +64,107 @@ namespace Project
             var list = new List<Student>();//Now i think about it all tehe reck migth just me student classes
 
             //Try changing it to list.Add(rec) or return studentRecords or list.Add(rec.Value)
+            //Just checked and it worked, but Refactoring of the whole codebase is needed and I aint got the energy for that ----> list.Add(rec) mainly problems with the id
             foreach (var rec in studentRecords)
             {
-                //Console.WriteLine(rec.Value.Student_Name);
-                list.Add(new Student()
+                Console.WriteLine("asdf acc "+acc);
+                if(acc == "student")
                 {
-                    id = rec.Key,
-                    Student_Name = rec.Value.Student_Name,
-                    Student_Number = rec.Value.Student_Number,
-                    Student_Email = rec.Value.Student_Email,
-                    Course_Name_Number = rec.Value.Course_Name_Number,
-                    Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
-                    Department = rec.Value.Department,
-                    Term_Or_Semester = rec.Value.Term_Or_Semester,
-                    Description_Violation = rec.Value.Description_Violation,
-                   
-                    Faculty_Member_Name = rec.Value.Faculty_Member_Name,
+                    if (rec.Value.Student_Number == stud_id)
+                    {
+                        list.Add(new Student()
+                        {
+                            id = rec.Key,
+                            Student_Name = rec.Value.Student_Name,
+                            Student_Number = rec.Value.Student_Number,
+                            Student_Email = rec.Value.Student_Email,
+                            Course_Name_Number = rec.Value.Course_Name_Number,
+                            Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
+                            Department = rec.Value.Department,
+                            Term_Or_Semester = rec.Value.Term_Or_Semester,
+                            Description_Violation = rec.Value.Description_Violation,
 
-                    Step_One_Date_1 = rec.Value.Step_One_Date_1,
+                            Faculty_Member_Name = rec.Value.Faculty_Member_Name,
 
-                    Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
-                    Step_One_Date = rec.Value.Step_One_Date,
-                    
-                    Student_Advised_1 = rec.Value.Student_Advised_1,
-                    Student_Advised_2 = rec.Value.Student_Advised_2,
-                    Student_Name_Step2 = rec.Value.Student_Name_Step2,
-                    MyTRU_Email = rec.Value.MyTRU_Email,
-                    Step2_Date = rec.Value.Step2_Date,
-                    Student_Agreement = rec.Value.Student_Agreement,
-                    Student_Comments = rec.Value.Student_Comments,
-                    Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
-                    Date_Step3 = rec.Value.Date_Step3,
-                    Department_Chair_Name = rec.Value.Department_Chair_Name,
-                    Agree_Step4 = rec.Value.Agree_Step4,
-                    Comments_Step4 = rec.Value.Comments_Step4,
-                    If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
-                    Date_Step4 = rec.Value.Date_Step4,
-                    Dean_Name = rec.Value.Dean_Name,
-                    Agree_Step5 = rec.Value.Agree_Step5,
-                    Comments_Step5 = rec.Value.Comments_Step5,
-                    If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
-                    Step5_Date = rec.Value.Step5_Date,
-                    Faculty_Comments = rec.Value.Faculty_Comments,
-                 
-                    OSA_Use_Only = rec.Value.OSA_Use_Only
+                            Step_One_Date_1 = rec.Value.Step_One_Date_1,
 
-                });
+                            Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
+                            Step_One_Date = rec.Value.Step_One_Date,
+
+                            Student_Advised_1 = rec.Value.Student_Advised_1,
+                            Student_Advised_2 = rec.Value.Student_Advised_2,
+                            Student_Name_Step2 = rec.Value.Student_Name_Step2,
+                            MyTRU_Email = rec.Value.MyTRU_Email,
+                            Step2_Date = rec.Value.Step2_Date,
+                            Student_Agreement = rec.Value.Student_Agreement,
+                            Student_Comments = rec.Value.Student_Comments,
+                            Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
+                            Date_Step3 = rec.Value.Date_Step3,
+                            Department_Chair_Name = rec.Value.Department_Chair_Name,
+                            Agree_Step4 = rec.Value.Agree_Step4,
+                            Comments_Step4 = rec.Value.Comments_Step4,
+                            If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
+                            Date_Step4 = rec.Value.Date_Step4,
+                            Dean_Name = rec.Value.Dean_Name,
+                            Agree_Step5 = rec.Value.Agree_Step5,
+                            Comments_Step5 = rec.Value.Comments_Step5,
+                            If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
+                            Step5_Date = rec.Value.Step5_Date,
+                            Faculty_Comments = rec.Value.Faculty_Comments,
+
+                            OSA_Use_Only = rec.Value.OSA_Use_Only
+
+                        });
+                    }
+                }
+                else
+                {
+                    list.Add(new Student()
+                    {
+                        id = rec.Key,
+                        Student_Name = rec.Value.Student_Name,
+                        Student_Number = rec.Value.Student_Number,
+                        Student_Email = rec.Value.Student_Email,
+                        Course_Name_Number = rec.Value.Course_Name_Number,
+                        Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
+                        Department = rec.Value.Department,
+                        Term_Or_Semester = rec.Value.Term_Or_Semester,
+                        Description_Violation = rec.Value.Description_Violation,
+
+                        Faculty_Member_Name = rec.Value.Faculty_Member_Name,
+
+                        Step_One_Date_1 = rec.Value.Step_One_Date_1,
+
+                        Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
+                        Step_One_Date = rec.Value.Step_One_Date,
+
+                        Student_Advised_1 = rec.Value.Student_Advised_1,
+                        Student_Advised_2 = rec.Value.Student_Advised_2,
+                        Student_Name_Step2 = rec.Value.Student_Name_Step2,
+                        MyTRU_Email = rec.Value.MyTRU_Email,
+                        Step2_Date = rec.Value.Step2_Date,
+                        Student_Agreement = rec.Value.Student_Agreement,
+                        Student_Comments = rec.Value.Student_Comments,
+                        Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
+                        Date_Step3 = rec.Value.Date_Step3,
+                        Department_Chair_Name = rec.Value.Department_Chair_Name,
+                        Agree_Step4 = rec.Value.Agree_Step4,
+                        Comments_Step4 = rec.Value.Comments_Step4,
+                        If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
+                        Date_Step4 = rec.Value.Date_Step4,
+                        Dean_Name = rec.Value.Dean_Name,
+                        Agree_Step5 = rec.Value.Agree_Step5,
+                        Comments_Step5 = rec.Value.Comments_Step5,
+                        If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
+                        Step5_Date = rec.Value.Step5_Date,
+                        Faculty_Comments = rec.Value.Faculty_Comments,
+
+                        OSA_Use_Only = rec.Value.OSA_Use_Only
+
+                    });
+                }
+                //Console.WriteLine(rec.Value.Student_Name);
+                
             }
             
 
@@ -351,7 +419,7 @@ namespace Project
             {
                 String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
                 //Console.WriteLine("DELETE");
-                //Console.WriteLine(this.run($"delete {ID}"));
+                Console.WriteLine(this.run($"delete {ID}"));
 
             }
 
@@ -1118,15 +1186,16 @@ namespace Project
             if (e.KeyCode == Keys.S && e.Control) // Ctrl + S
             {
                 
-                MessageBox.Show("Save action triggered!");
-                e.Handled = true; 
-            }else if (e.KeyCode == Keys.N)
+               //Implment this
+            }else if (e.KeyCode == Keys.N && e.Control)
             {
                 nextOrnot(-1);
+                e.Handled = true;
             }
-            else if (e.KeyCode == Keys.B)
+            else if (e.KeyCode == Keys.B && e.Control)
             {
                 nextOrnot(1);
+                e.Handled = true;
             }
         }
 
@@ -1169,6 +1238,17 @@ namespace Project
                 b.PerformClick();
             }
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            Auth auth = new Auth();
+            auth.Show();
+            StreamWriter write = new StreamWriter("sess.txt", false);
+            write.Write("");
+            write.Close();
+            this.Close();
         }
     }
 }
