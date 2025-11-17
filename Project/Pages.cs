@@ -48,7 +48,9 @@ namespace Project
             read.Close();
 
 
-            var list = new List<Student>();
+            var list = new List<Student>();//Now i think about it all tehe reck migth just me student classes
+
+            //Try changing it to list.Add(rec) or return studentRecords or list.Add(rec.Value)
             foreach (var rec in studentRecords)
             {
                 //Console.WriteLine(rec.Value.Student_Name);
