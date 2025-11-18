@@ -1,0 +1,72 @@
+[
+  {
+    "i_d": {
+      "id": 1,
+      "student_name": "John Doe",
+      "student_number": "12345678",
+      "student_email": "john.doe@example.com",
+      "course_name_number": "CS101 - Introduction to Computer Science",
+      "assignment_number_or_exam": "Assignment 1",
+      "department": "Computer Science",
+      "term_or_semester": "Fall 2023",
+      "description_violation": "Plagiarism in code submission",
+      "faculty_member_name": "Dr. Alice Johnson"
+    }
+  },
+  {
+    "i_d": {
+      "id": 2,
+      "student_name": "Jane Smith",
+      "student_number": "23456789",
+      "student_email": "jane.smith@example.com",
+      "course_name_number": "MATH101 - Calculus I",
+      "assignment_number_or_exam": "Midterm Exam",
+      "department": "Mathematics",
+      "term_or_semester": "Spring 2023",
+      "description_violation": "Cheating during the exam",
+      "faculty_member_name": "Prof. Robert Brown"
+    }
+  },
+  {
+    "i_d": {
+      "id": 3,
+      "student_name": "Alice Williams",
+      "student_number": "34567890",
+      "student_email": "alice.williams@example.com",
+      "course_name_number": "ENG202 - English Literature",
+      "assignment_number_or_exam": "Final Essay",
+      "department": "English",
+      "term_or_semester": "Summer 2023",
+      "description_violation": "Late submission without valid reason",
+      "faculty_member_name": "Dr. Claire Evans"
+    }
+  },
+  {
+    "i_d": {
+      "id": 4,
+      "student_name": "Michael Brown",
+      "student_number": "45678901",
+      "student_email": "michael.brown@example.com",
+      "course_name_number": "PHYS101 - Physics I",
+      "assignment_number_or_exam": "Assignment 2",
+      "department": "Physics",
+      "term_or_semester": "Fall 2023",
+      "description_violation": "Misuse of laboratory equipment",
+      "faculty_member_name": "Prof. David Lee"
+    }
+  },
+  {
+    "i_d": {
+      "id": 5,
+      "student_name": "Emily Davis",
+      "student_number": "56789012",
+      "student_email": "emily.davis@example.com",
+      "course_name_number": "CHEM101 - Chemistry I",
+      "assignment_number_or_exam": "Quiz 3",
+      "department": "Chemistry",
+      "term_or_semester": "Winter 2023",
+      "description_violation": "Failure to follow safety protocols in lab",
+      "faculty_member_name": "Dr. Michael Scott"
+    }
+  }
+]
