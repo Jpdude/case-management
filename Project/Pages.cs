@@ -15,9 +15,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
-//using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Project
 {
@@ -31,32 +28,46 @@ namespace Project
         public string acc;
         public string stud_id;
 
-        public Pages( string acct , string id)
+        public Pages( string acct , string id , string name = "testAccount")
         {
             this.acc = acct;
             this.stud_id = id;
+
             Students = GetStudents();
             InitializeComponent();
             curr_form = Form1;
+
+            //THis makes sure all the keybinds go through the form first rather than focued controls
             this.KeyPreview = true;
             
-
+            
             if (acct == "student")
             {
                 button11.Visible = false;
                 button10.Visible = false;
                 groupBox1.Visible = false;
+                label90.Text = "Student";
                 
+            }
+
+            if (name != "" && name != "\n" && name != null)
+            {
+                label89.Text = name;
+            }
+            else
+            {
+                label89.Text = "testAccount";
             }
         }
 
 
+        // Function Used to Retrive all Case info from the Json file ( data.txt ) Parse it to a Dictionary<string, Student> type and throw it in a list to be used by the program at will
         private List<Student> GetStudents()
         {
 
             StreamReader read = new StreamReader("data.txt");//change back to data.txt
             String Textdata = read.ReadToEnd();
-           
+
             var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
             read.Close();
 
@@ -65,115 +76,31 @@ namespace Project
 
             //Try changing it to list.Add(rec) or return studentRecords or list.Add(rec.Value)
             //Just checked and it worked, but Refactoring of the whole codebase is needed and I aint got the energy for that ----> list.Add(rec) mainly problems with the id
+
+            //Refactored Code
             foreach (var rec in studentRecords)
             {
-                Console.WriteLine("asdf acc "+acc);
-                if(acc == "student")
+                rec.Value.id = rec.Key;
+                Console.WriteLine("asdf acc " + acc);
+                if (acc == "student")
                 {
                     if (rec.Value.Student_Number == stud_id)
                     {
-                        list.Add(new Student()
-                        {
-                            id = rec.Key,
-                            Student_Name = rec.Value.Student_Name,
-                            Student_Number = rec.Value.Student_Number,
-                            Student_Email = rec.Value.Student_Email,
-                            Course_Name_Number = rec.Value.Course_Name_Number,
-                            Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
-                            Department = rec.Value.Department,
-                            Term_Or_Semester = rec.Value.Term_Or_Semester,
-                            Description_Violation = rec.Value.Description_Violation,
-
-                            Faculty_Member_Name = rec.Value.Faculty_Member_Name,
-
-                            Step_One_Date_1 = rec.Value.Step_One_Date_1,
-
-                            Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
-                            Step_One_Date = rec.Value.Step_One_Date,
-
-                            Student_Advised_1 = rec.Value.Student_Advised_1,
-                            Student_Advised_2 = rec.Value.Student_Advised_2,
-                            Student_Name_Step2 = rec.Value.Student_Name_Step2,
-                            MyTRU_Email = rec.Value.MyTRU_Email,
-                            Step2_Date = rec.Value.Step2_Date,
-                            Student_Agreement = rec.Value.Student_Agreement,
-                            Student_Comments = rec.Value.Student_Comments,
-                            Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
-                            Date_Step3 = rec.Value.Date_Step3,
-                            Department_Chair_Name = rec.Value.Department_Chair_Name,
-                            Agree_Step4 = rec.Value.Agree_Step4,
-                            Comments_Step4 = rec.Value.Comments_Step4,
-                            If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
-                            Date_Step4 = rec.Value.Date_Step4,
-                            Dean_Name = rec.Value.Dean_Name,
-                            Agree_Step5 = rec.Value.Agree_Step5,
-                            Comments_Step5 = rec.Value.Comments_Step5,
-                            If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
-                            Step5_Date = rec.Value.Step5_Date,
-                            Faculty_Comments = rec.Value.Faculty_Comments,
-
-                            OSA_Use_Only = rec.Value.OSA_Use_Only
-
-                        });
+                        list.Add(rec.Value);
                     }
                 }
                 else
                 {
-                    list.Add(new Student()
-                    {
-                        id = rec.Key,
-                        Student_Name = rec.Value.Student_Name,
-                        Student_Number = rec.Value.Student_Number,
-                        Student_Email = rec.Value.Student_Email,
-                        Course_Name_Number = rec.Value.Course_Name_Number,
-                        Assignment_Number_Or_Exam = rec.Value.Assignment_Number_Or_Exam,
-                        Department = rec.Value.Department,
-                        Term_Or_Semester = rec.Value.Term_Or_Semester,
-                        Description_Violation = rec.Value.Description_Violation,
-
-                        Faculty_Member_Name = rec.Value.Faculty_Member_Name,
-
-                        Step_One_Date_1 = rec.Value.Step_One_Date_1,
-
-                        Faculty_Member_Name_1 = rec.Value.Faculty_Member_Name_1,
-                        Step_One_Date = rec.Value.Step_One_Date,
-
-                        Student_Advised_1 = rec.Value.Student_Advised_1,
-                        Student_Advised_2 = rec.Value.Student_Advised_2,
-                        Student_Name_Step2 = rec.Value.Student_Name_Step2,
-                        MyTRU_Email = rec.Value.MyTRU_Email,
-                        Step2_Date = rec.Value.Step2_Date,
-                        Student_Agreement = rec.Value.Student_Agreement,
-                        Student_Comments = rec.Value.Student_Comments,
-                        Faculty_Member_Name_2 = rec.Value.Faculty_Member_Name_2,
-                        Date_Step3 = rec.Value.Date_Step3,
-                        Department_Chair_Name = rec.Value.Department_Chair_Name,
-                        Agree_Step4 = rec.Value.Agree_Step4,
-                        Comments_Step4 = rec.Value.Comments_Step4,
-                        If_Agree_No_Explain_Step4 = rec.Value.If_Agree_No_Explain_Step4,
-                        Date_Step4 = rec.Value.Date_Step4,
-                        Dean_Name = rec.Value.Dean_Name,
-                        Agree_Step5 = rec.Value.Agree_Step5,
-                        Comments_Step5 = rec.Value.Comments_Step5,
-                        If_Agree_No_Explain_Step5 = rec.Value.If_Agree_No_Explain_Step5,
-                        Step5_Date = rec.Value.Step5_Date,
-                        Faculty_Comments = rec.Value.Faculty_Comments,
-
-                        OSA_Use_Only = rec.Value.OSA_Use_Only
-
-                    });
+                    list.Add(rec.Value);
                 }
-                //Console.WriteLine(rec.Value.Student_Name);
-                
             }
-            
-
-            
             return list;
-            
         }
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Hiding all panels(Forms) and leaving only the first ones visible
             panel1.AutoScroll = true;
             panel1.Visible = true;
             panel2.Visible = false;
@@ -181,17 +108,23 @@ namespace Project
             panel4.Visible = false;
             panel5.Visible = false;
             panel6.Visible = false;
+
+            // Getting the student lisr from the global variable Students and passing it to the DGV
             var students = this.Students;
             dataGridView1.DataSource = students;
+
             int last = dataGridView1.ColumnCount - 1;
+            // This code makes sure the last column color stays red, but doesnt handle the case when the DGV is reloaded
             DataGridViewCellStyle specificCellStyle = new DataGridViewCellStyle();
             specificCellStyle.BackColor = System.Drawing.Color.FromArgb(150,0,10);
+
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
 
                 row.Cells[last].Style.ApplyStyle(specificCellStyle);
 
             }
+            // Adding nodes the treeview node 
             treeView1.Nodes.Add("Form1");
             treeView1.Nodes.Add("Form2");
             treeView1.Nodes.Add("Form3");
@@ -199,8 +132,8 @@ namespace Project
             treeView1.Nodes.Add("Form5");
             treeView1.Nodes.Add("Form6");
             treeView1.Nodes.Add("Form7");
-            int i;
-            Console.WriteLine("Hkh");
+            
+            //Populating Each of the nodes
             populate(panel0,0);
             populate(panel1,1);
             populate(panel2,2);
@@ -213,9 +146,9 @@ namespace Project
 
         }
 
+        // this function populates each of the nodes by looking for values in this order TableLayoutPanel > FlowLayoutPanel > RichTextBox or the topmost RichTextBox
         public void populate( Panel p , int num)
         {
-            Console.WriteLine("--------------------------" + p + "-----------------------------------");
             //Recursion is never a good idea but fk it we balll
             foreach (Control ctrl in p.Controls)
             {
@@ -257,120 +190,11 @@ namespace Project
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            StreamReader read = new StreamReader("data.txt");
-            String Textdata = read.ReadToEnd();
-            var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
-            
-            read.Close();
-            JsonConvert.DeserializeObject(Textdata);
-            //richTextBox18.Text = Textdata;
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //StreamReader read = new StreamReader("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
-            //String Textdata = read.ReadLine();
-            //read.Close();
-            //richTextBox2.Text = Textdata;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //String text = richTextBox2.Text;
-            //StreamWriter write = new StreamWriter("C:\\Users\\T00749160\\OneDrive - Thompson Rivers University\\Documents\\Project\\Project\\obj\\Debug\\new 1.txt");
-            //write.WriteLine(text);
-            //write.Close();
-            
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+   
+       
+        //This function is responsible for excecuting the python script that runs the CRUD operations. It takes the the parameters of the script as an argument
         public Boolean run(String args)
         {
             //string pythonPath = @"C:\Users\Jp\AppData\Local\Programs\Python\Python313\python.exe";//change this l8r
@@ -396,9 +220,9 @@ namespace Project
             }
             //Console.ReadKey();
             //Console.WriteLine("result", res);
-            if (res.Trim() == "OK" )
+            if (res.Trim() == "OK" )// If the file prints ok to the standard output that means the crud operation was sucessfull otherwise it was not
             {
-                //Console.WriteLine("INNN");
+                // Reloading the DBV with new data
                 this.Students = GetStudents();//or i could just edit student object directly( would be faster)
                 dataGridView1.DataSource = this.Students;
                 return true;
@@ -409,6 +233,8 @@ namespace Project
                 return false;
             }
         }
+
+        // This is the delete function 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Console.WriteLine(e.ColumnIndex);
@@ -425,52 +251,15 @@ namespace Project
 
         }
 
+        // This configures the DBV's colums and rows
         private void config()
         {
             dataGridView1.ColumnCount = 10;
             dataGridView1.RowCount = 10;
-
-
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            button11.BackColor = System.Drawing.Color.FromArgb(0, 152, 254);
-            button11.FlatStyle = FlatStyle.Flat;
-            button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 102, 204);
-            
-            
-            button11.Size  = new Size(50, 30);
-            button11.Location = new Point(button11.Location.X, button11.Location.Y-5);
 
-            button10.BackColor = SystemColors.Control;
-            button10.FlatStyle = FlatStyle.Standard;
-            button10.Size = new Size(40, 20);
-            button10.Location = new Point(19, 92);
-
-            groupBox1.Text = "Edit";
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            button10.BackColor = System.Drawing.Color.FromArgb(0, 152, 254);
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 102, 204);
-            button10.Size = new Size(50, 30);
-            button10.Location = new Point(10, 87);
-
-            button11.BackColor = SystemColors.Control;
-            button11.FlatStyle = FlatStyle.Standard;
-            button11.Size = new Size(40, 20);
-            button11.Location = new Point(button11.Location.X, button11.Location.Y + 5);
-            //button11.Location = new Point(button11.Location.X, button11.Location.Y - 15);
-
-            groupBox1.Text = "Add";
-            
-
-
-        }
-
+        // Logic for the checkboxes
         public String checkBoxes(String first , String second , Boolean adv = false)
         {
             if (adv)
@@ -503,6 +292,8 @@ namespace Project
             
             
         }
+
+        // This method inflates( fills ) not only fills the TextBoxes but also manages their state , the file parameter is depreacated i should remove it later
         private void inflate(string name , string info , Boolean file= false , Boolean disable = false)
         {
             
@@ -511,6 +302,8 @@ namespace Project
             //Control tbx1 = this.Controls.Find("Student_Name", true).FirstOrDefault();
             RichTextBox tbx = this.Controls.Find(name, true).FirstOrDefault() as RichTextBox;
             //Console.WriteLine("tbx: " + tbx);
+
+            //logic for inflating the checkboxes
             if (name == "Student_Advised_1")
             {
                 if (info == "true")
@@ -573,6 +366,8 @@ namespace Project
                     dean_n.Text = "✅";
                 }
             }
+
+            //Logic for control states
             if (disable)
             {
                 
@@ -635,31 +430,25 @@ namespace Project
             }
 
             //Console.WriteLine("tbx1: " + tbx1);
+            //Inflating the textboxes
             if (tbx != null)
             {
                 tbx.Text = info;
                 if (disable)
                 {
                     tbx.Enabled = false;
-                   
                 }
                 else
                 {
                     tbx.Enabled = true;
-
                 }
-
 
             }
             
-            
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        // Function for the enabled checkbox, this function is responible for passing the accruate info to the inflate function to diable or enable controls
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             var students = this.Students;
@@ -685,24 +474,24 @@ namespace Project
                 }
             }
             
-            
-            
         }
-
+        //This function is responsible for sure all the textboxes are populated with information from the file
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.CurrentRow.Selected = true;
+
+            //Changing tab view to Case Tab
             tabControl1.SelectedTab = tabPage4;
             //Console.WriteLine(dataGridView1.Columns[e.ColumnIndex]);
-            var students = this.Students;
-            foreach (var rec in students)
+            var students = this.Students; // Getting List of Students
+            foreach (var rec in students)// Looping through student and finding the one that matches the ID we wanna display
             {
                 if (dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString() == rec.id)
                 {
-                    this.id = int.Parse(rec.id);
-                    foreach (var attr in rec.GetType().GetProperties())
+                    this.id = int.Parse(rec.id);//setting the global variable id to for reference to the student info we are working with currently
+                    foreach (var attr in rec.GetType().GetProperties())//Looping through each attribute in the student class
                     {
-                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);
+                        this.inflate(attr.Name, attr.GetValue(rec, null).ToString(),false,true);// Inflating the attributes to the textboxes i.e Filling all the textboexes with the students case info
                         //Console.WriteLine(attr.Name);
                         //Console.WriteLine(attr.GetValue(rec, null).ToString());
                     }
@@ -712,11 +501,8 @@ namespace Project
 
         }
 
-        private void richTextBox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        //Checkbutton logic
         public void changeBtn( Button mainBtn , Button subBtn)
         {
             if ( subBtn.Text == "✅")
@@ -734,6 +520,8 @@ namespace Project
 
 
         }
+
+        //Checkbutton logic 
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -747,21 +535,8 @@ namespace Project
             }
         }
 
-        private void label29_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //Checkbutton logic ... why are they so many of these???
         private void button5_Click(object sender, EventArgs e)
         {
             if (button5.Text == "✅")
@@ -774,23 +549,21 @@ namespace Project
             }
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        // This function works as an adapter between the C# and Python as it gets all the data from the textboxes and sends them off to python to excute the changes ( Mainly for additon and modification) delete and view are handling by other functions
         private void update(String type)
         {
             Console.WriteLine("ID" + this.id);
             var students = this.Students;
             var id = this.id;
-            String text = "[";
+            String text = "["; // Setting text to start of python list
             String t = "";
-            Boolean d = false;
-            StreamWriter writer = new StreamWriter("update.txt");
+            Boolean d = false;// If true means txtbx was left empty
+            StreamWriter writer = new StreamWriter("update.txt");// this is incase we dont pass the info directly to python and choose to pass it to a file instead
 
-            foreach (var rec in students)
+            foreach (var rec in students)// FInding student object, the id part may not be needed .. note to self to reevalute later - it's not need since attr.Value isnt called
             {
+                //Remove this if statement
                 if (id == int.Parse(rec.id)) // I actually dont have to make id a int, id doesnt have to be an int throught out but i feel like it's better if i follow the canonical way of initializing ids
                 {
                     foreach (var attr in rec.GetType().GetProperties())
@@ -847,36 +620,33 @@ namespace Project
 
             //    }
             //}
+
+            //closing the python list type string
             text += "]";
             
-
-                writer.WriteLine(text);
+            //Writing to the output file just in case
+            writer.WriteLine(text);
             writer.Close();
-            //Console.WriteLine(text);
-            //String text = richTextBox2.Text;
-            //StreamWriter write = new StreamWriter("update.txt");
-            //write.WriteLine(text);
-            //write.Close();
             
-            if (d)
+            if (d) // Checking if any field was left empty
             {
                 DialogResult result = MessageBox.Show("You may be missing some info, Do you wish to coutinue?",
                                              "Exit Confirmation",
                                              MessageBoxButtons.YesNoCancel,
                                              MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    
-                }
-                else
+                if (!(result == DialogResult.Yes))
                 {
                     type = "non";
                 }
+                
             }
-            
-                
-                
-            Console.WriteLine(this.run($"{type} {id} -o -i \"{text}\" "));
+
+
+            /*
+            Sending data this way isn't mandatory, 
+            just omit the -i flag and python will take the data from the output.txt file 
+            */
+            Console.WriteLine(this.run($"{type} {id} -o -i \"{text}\" "));//Calling run to Excute the python file where type is the operation id is the id and text is the data being sent 
             tabControl1.SelectedTab = tabPage3;
             checkBox1.Checked = false;
             if (type != "non")
@@ -884,6 +654,8 @@ namespace Project
             
 
         }
+
+        //Depending on the mode this function saves or modifys the database
         private void button7_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -902,6 +674,7 @@ namespace Project
 
         }
 
+        // This function clears the form
         private void button8_Click(object sender, EventArgs e)
         {
             var students = this.Students;
@@ -910,19 +683,15 @@ namespace Project
                     this.id = int.Parse(rec.id);
                     foreach (var attr in rec.GetType().GetProperties())
                     {
-                        this.inflate(attr.Name, "");
-                        //Console.WriteLine(attr.Name);
-                        //Console.WriteLine(attr.GetValue(rec, null).ToString());
+                        this.inflate(attr.Name, "");// It does this by inflating it but with empty strings
+                        
                     }
 
             }
         }
 
-        private void Student_Number_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        //This function switches the modes ( Add,Edit)
         private void button10_Click_1(object sender, EventArgs e)
         {
             if(groupBox1.Text == "Add")
@@ -963,27 +732,10 @@ namespace Project
 
             }
             curr_form.BackColor = modify_clr;
-
-
-
         }
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-            //panel3.Visible = false;
-            //panel3.Size = new Size(0,0);
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            //panel3.Visible = true;
-        }
-
+        
+        // This function is responsible for diplaying the forms by only making the required form visible and hiding the others
         private void change( Button form , Panel panel)
         {
             
@@ -1019,46 +771,24 @@ namespace Project
             treeView1.Nodes[int.Parse(p)].Expand();
             button1.BringToFront();
         }
+
+        // These are Just the form buttons that call the change function to display the desired form
         private void button13_Click(object sender, EventArgs e)
         {
             this.change(Form1, panel0);
             panel0.AutoScroll = true;
 
         }
-
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button14_Click_1(object sender, EventArgs e)
         {
             changeBtn(Review_Yes, Review_No);
         }
-
-
         private void button16_Click_1(object sender, EventArgs e)
         {
             this.change(Form2, panel1);
             panel1.AutoScroll = true;
 
         }
-
-        private void panel3_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button17_Click(object sender, EventArgs e)
         {
             this.change(Form3, panel2);
@@ -1079,26 +809,12 @@ namespace Project
             this.change(Form5, panel4);
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form7_Click(object sender, EventArgs e)
         {
             this.change(Form7, panel6);
         }
 
+        // This function handles the logic of the next and previous buttons 
         private void nextOrnot(int num)
         {
             //Could make this code shorter but bruh..
@@ -1122,7 +838,6 @@ namespace Project
                         i = -1;
                     }
 
-
                     ctrl = (Button)coll[i + num];
                     curr_form = ctrl;
                     ctrl.PerformClick();
@@ -1135,27 +850,20 @@ namespace Project
 
             }
         }
+
+        //Previous button
         private void button19_Click(object sender, EventArgs e)
         {
             nextOrnot(1);
 
         }
-
+        //Next button
         private void button20_Click(object sender, EventArgs e)
         {
             nextOrnot(-1);
         }
 
-        private void label14_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+       //Checkbox Button functions
         private void Review_No_Click(object sender, EventArgs e)
         {
             changeBtn(Review_No, Review_Yes);
@@ -1181,6 +889,8 @@ namespace Project
             changeBtn(dean_n, dean_y);
         }
 
+
+        //This function handles all the shortcut keys
         private void Pages_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.S && e.Control) // Ctrl + S
@@ -1204,7 +914,7 @@ namespace Project
         }
 
         
-
+        // THis function expands or minimized the treeview
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (button1.Text == ">")
@@ -1222,6 +932,8 @@ namespace Project
             
         }
 
+
+        //Minimal function that binds each node in the tree view to its corresspondig attribute
         private void treeView1_AfterSelect_2(object sender, TreeViewEventArgs e)
         {
             //This is as far as I'm going... I have a life to live T_T
@@ -1241,6 +953,7 @@ namespace Project
 
         }
 
+        //This is the sign_out function ... It essentially signs you out
         private void button6_Click(object sender, EventArgs e)
         {
             
@@ -1251,5 +964,7 @@ namespace Project
             write.Close();
             this.Close();
         }
+
+       
     }
 }

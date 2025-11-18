@@ -136,7 +136,6 @@
             this.label6.Size = new System.Drawing.Size(67, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Password";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // button1
             // 
@@ -206,7 +205,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Auth";
             this.Text = "Auth";
-            this.Load += new System.EventHandler(this.Auth_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

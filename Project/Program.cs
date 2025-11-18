@@ -22,6 +22,7 @@ namespace Project
             {
                 string type = read.ReadLine();
                 string username = read.ReadLine();
+                string name = read.ReadLine();
                 Console.WriteLine("sgfg"+type);
                 read.Close();
                 if (type == null || username == null)
@@ -29,7 +30,7 @@ namespace Project
                     throw new Exception();
                 }
                 
-                Application.Run(new Pages(type, username));
+                Application.Run(new Pages(type, username , name));
 
             }
             catch
