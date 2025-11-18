@@ -570,7 +570,7 @@ namespace Project
                     {
                         RichTextBox tbx = this.Controls.Find(attr.Name, true).FirstOrDefault() as RichTextBox;
 
-                        
+                        Console.WriteLine("atrr" + attr.Name);
                         
                         if (tbx != null || attr.Name == "Student_Agreement" || attr.Name == "Agree_Step4" || attr.Name == "Agree_Step5" || attr.Name == "Student_Advised_1" || attr.Name == "Student_Advised_2")
                         {
@@ -587,20 +587,26 @@ namespace Project
                             {
                                 t = checkBoxes( dean_y.Text, dean_n.Text);
                             }
-                            else if (attr.Name == "student_advised_1")
+                            else if (attr.Name == "Student_Advised_1")
                             {
                                 t = checkBoxes(button4.Text,"",true);
+
                             }
-                            else if (attr.Name == "student_advised_2")
+                            else if (attr.Name == "Student_Advised_2")
                             {
                                 t = checkBoxes(button5.Text, "",true);
                             }
-                            if (tbx != null)
+                            if (tbx != null && t == "")
                                 t = tbx.Text;
+
                             text += $"('{attr.Name}','{t}'),";
 
                             if (t == "")
+                            {
                                 d = true;
+                            }
+                            t = "";
+
                         }
                         //this.inflate(attr.Name, attr.GetValue(rec, null).ToString(), true);
                     }
@@ -749,7 +755,7 @@ namespace Project
             panel5.Visible = false;
             panel6.Visible = false;
 
-            Console.WriteLine(panel.ToString());
+            //Console.WriteLine(panel.ToString());
             panel.Visible = true;
             //panel.BringToFront();
 
@@ -761,12 +767,12 @@ namespace Project
             Form6.BackColor = main_clr;
             Form7.BackColor = main_clr;
 
-            Console.WriteLine(panel.Name);
+            //Console.WriteLine(panel.Name);
             form.BackColor = modify_clr;
             String p = Char.ToString((panel.Name)[5]);
 
             treeView1.CollapseAll();
-            Console.WriteLine(p);
+            //Console.WriteLine(p);
             treeView1.BringToFront();
             treeView1.Nodes[int.Parse(p)].Expand();
             button1.BringToFront();
