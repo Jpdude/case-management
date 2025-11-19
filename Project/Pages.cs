@@ -84,7 +84,7 @@ namespace Project
                 Console.WriteLine("asdf acc " + acc);
                 if (acc == "student")
                 {
-                    if (rec.Value.Student_Number == stud_id)
+                    if (rec.Value.Student_Number.ToUpper() == stud_id.ToUpper())
                     {
                         list.Add(rec.Value);
                     }
