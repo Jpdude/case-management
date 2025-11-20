@@ -64,37 +64,47 @@ namespace Project
         // Function Used to Retrive all Case info from the Json file ( data.txt ) Parse it to a Dictionary<string, Student> type and throw it in a list to be used by the program at will
         private List<Student> GetStudents()
         {
-
-            StreamReader read = new StreamReader("data.txt");//change back to data.txt
-            String Textdata = read.ReadToEnd();
-
-            var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
-            read.Close();
-
-
             var list = new List<Student>();//Now i think about it all tehe reck migth just me student classes
-
-            //Try changing it to list.Add(rec) or return studentRecords or list.Add(rec.Value)
-            //Just checked and it worked, but Refactoring of the whole codebase is needed and I aint got the energy for that ----> list.Add(rec) mainly problems with the id
-
-            //Refactored Code
-            foreach (var rec in studentRecords)
+            if (File.Exists("data.txt"))
             {
-                rec.Value.id = rec.Key;
-                Console.WriteLine("asdf acc " + acc);
-                if (acc == "student")
+                StreamReader read = new StreamReader("data.txt");//change back to data.txt
+                String Textdata = read.ReadToEnd();
+
+                var studentRecords = JsonConvert.DeserializeObject<Dictionary<string, Student>>(Textdata);
+                read.Close();
+
+
+                
+
+                //Try changing it to list.Add(rec) or return studentRecords or list.Add(rec.Value)
+                //Just checked and it worked, but Refactoring of the whole codebase is needed and I aint got the energy for that ----> list.Add(rec) mainly problems with the id
+
+                //Refactored Code
+                foreach (var rec in studentRecords)
                 {
-                    if (rec.Value.Student_Number.ToUpper() == stud_id.ToUpper())
+                    rec.Value.id = rec.Key;
+                    Console.WriteLine("asdf acc " + acc);
+                    if (acc == "student")
+                    {
+                        if (rec.Value.Student_Number.ToUpper() == stud_id.ToUpper())
+                        {
+                            list.Add(rec.Value);
+                        }
+                    }
+                    else
                     {
                         list.Add(rec.Value);
                     }
                 }
-                else
-                {
-                    list.Add(rec.Value);
-                }
+                
+            }
+            else
+            {
+                MessageBox.Show("No Record File found");
             }
             return list;
+
+
         }
 
 
@@ -230,6 +240,7 @@ namespace Project
             }
             else
             {
+                MessageBox.Show("Oh no something went wrong :(");
                 return false;
             }
         }
