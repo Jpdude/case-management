@@ -61,17 +61,12 @@ namespace Project
                 {
                     if (password == acc["password"])
                     {
-                        MessageBox.Show("Correct!");
+                        //MessageBox.Show("Correct!"); debugging purposes
                         if (acc["Acc_type"] == "student")
                         {
-                            
-                            
-                            
+                             
                             Pages page = new Pages(acc["Acc_type"], acc["id"], acc["name"]);
                             page.Show();
-                            
-                            
-                            
                             
                         }
                         else
@@ -100,9 +95,11 @@ namespace Project
             {
                 MessageBox.Show("Incorrect Password!");
             }
+
+            // For debugging purposes
             if (!loggedIn)
             {
-                if (textBox1.Text[0] == 'P')
+                if (textBox1.Text[0] == 'p')
                 {
                     Pages page = new Pages("admin", username);
                     page.Show();
@@ -129,5 +126,7 @@ namespace Project
 
 
         }
+
+     
     }
 }

@@ -251,14 +251,21 @@ namespace Project
             //Console.WriteLine(e.ColumnIndex);
             
 
-
-            if (e.ColumnIndex == 9)
+            if (acc == "student")
             {
-                String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
-                //Console.WriteLine("DELETE");
-                Console.WriteLine(this.run($"delete {ID}"));
-
+                MessageBox.Show("You are not allowed to perform this operation");
             }
+            else
+            {
+                if (e.ColumnIndex == 9)
+                {
+                    String ID = dataGridView1.Rows[e.RowIndex].Cells["idDataGridViewTextBoxColumn"].FormattedValue.ToString();
+                    //Console.WriteLine("DELETE");
+                    Console.WriteLine(this.run($"delete {ID}"));
+
+                }
+            }
+            
 
         }
 
@@ -714,10 +721,10 @@ namespace Project
             if(groupBox1.Text == "Add")
             {
                 button11.Text = "Edit";
-                button11.BackColor = Color.CornflowerBlue;
+                button11.BackColor = Color.Yellow;
                 //button11.FlatStyle = FlatStyle.Flat;
-                button11.FlatAppearance.BorderColor = Color.Blue;
-                modify_clr = Color.Blue;
+                button11.FlatAppearance.BorderColor = Color.Gold;
+                modify_clr = Color.Gold;
 
 
                 //button11.Size = new Size(50, 30);
@@ -844,7 +851,7 @@ namespace Project
                 Console.WriteLine(ctrl.Text);
                 Console.WriteLine(ctrl.BackColor);
                 Console.WriteLine(i);
-                if (ctrl.BackColor == Color.LightGray || ctrl.BackColor == Color.Lime || ctrl.BackColor == Color.Blue )
+                if (ctrl.BackColor == Color.LightGray || ctrl.BackColor == Color.Lime || ctrl.BackColor == Color.Gold )
                 {
                     if (i == 0 && num == -1)
                     {

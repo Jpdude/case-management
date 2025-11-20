@@ -40,7 +40,17 @@
             this.label89 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseNameNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termOrSemesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionViolationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facultyMemberNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -250,19 +260,10 @@
             this.Form1 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseNameNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.termOrSemesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionViolationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facultyMemberNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel0.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -307,7 +308,6 @@
             this.flowLayoutPanel17.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -413,6 +413,69 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ToolTipText = "id";
+            // 
+            // studentNameDataGridViewTextBoxColumn
+            // 
+            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "Student_Name";
+            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
+            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
+            this.studentNameDataGridViewTextBoxColumn.ToolTipText = "Student Name";
+            // 
+            // studentNumberDataGridViewTextBoxColumn
+            // 
+            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "Student_Number";
+            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student Number";
+            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
+            this.studentNumberDataGridViewTextBoxColumn.ToolTipText = "Student Number";
+            // 
+            // studentEmailDataGridViewTextBoxColumn
+            // 
+            this.studentEmailDataGridViewTextBoxColumn.DataPropertyName = "Student_Email";
+            this.studentEmailDataGridViewTextBoxColumn.HeaderText = "Student Email";
+            this.studentEmailDataGridViewTextBoxColumn.Name = "studentEmailDataGridViewTextBoxColumn";
+            this.studentEmailDataGridViewTextBoxColumn.ToolTipText = "Student Email";
+            // 
+            // courseNameNumberDataGridViewTextBoxColumn
+            // 
+            this.courseNameNumberDataGridViewTextBoxColumn.DataPropertyName = "Course_Name_Number";
+            this.courseNameNumberDataGridViewTextBoxColumn.HeaderText = "Course Name Number";
+            this.courseNameNumberDataGridViewTextBoxColumn.Name = "courseNameNumberDataGridViewTextBoxColumn";
+            this.courseNameNumberDataGridViewTextBoxColumn.ToolTipText = "Course Name Number";
+            // 
+            // departmentDataGridViewTextBoxColumn
+            // 
+            this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
+            this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
+            this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            this.departmentDataGridViewTextBoxColumn.ToolTipText = "Department";
+            // 
+            // termOrSemesterDataGridViewTextBoxColumn
+            // 
+            this.termOrSemesterDataGridViewTextBoxColumn.DataPropertyName = "Term_Or_Semester";
+            this.termOrSemesterDataGridViewTextBoxColumn.HeaderText = "Term Or Semester";
+            this.termOrSemesterDataGridViewTextBoxColumn.Name = "termOrSemesterDataGridViewTextBoxColumn";
+            this.termOrSemesterDataGridViewTextBoxColumn.ToolTipText = "Term Or Semester";
+            // 
+            // descriptionViolationDataGridViewTextBoxColumn
+            // 
+            this.descriptionViolationDataGridViewTextBoxColumn.DataPropertyName = "Description_Violation";
+            this.descriptionViolationDataGridViewTextBoxColumn.HeaderText = "Description Violation";
+            this.descriptionViolationDataGridViewTextBoxColumn.Name = "descriptionViolationDataGridViewTextBoxColumn";
+            this.descriptionViolationDataGridViewTextBoxColumn.ToolTipText = "Description Violation";
+            // 
+            // facultyMemberNameDataGridViewTextBoxColumn
+            // 
+            this.facultyMemberNameDataGridViewTextBoxColumn.DataPropertyName = "Faculty_Member_Name";
+            this.facultyMemberNameDataGridViewTextBoxColumn.HeaderText = "Faculty Member Name";
+            this.facultyMemberNameDataGridViewTextBoxColumn.Name = "facultyMemberNameDataGridViewTextBoxColumn";
+            this.facultyMemberNameDataGridViewTextBoxColumn.ToolTipText = "Faculty Member Name";
+            // 
             // Delete
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -422,6 +485,10 @@
             this.Delete.HeaderText = "Delete";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
             this.Delete.Name = "Delete";
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(Project.Student);
             // 
             // tabPage4
             // 
@@ -606,7 +673,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.86636F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.13364F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 447F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 449F));
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel11, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel12, 0, 0);
@@ -623,7 +690,7 @@
             this.flowLayoutPanel10.Controls.Add(this.label26);
             this.flowLayoutPanel10.Controls.Add(this.Step_One_Date_1);
             this.flowLayoutPanel10.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(553, 4);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(551, 4);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(304, 67);
             this.flowLayoutPanel10.TabIndex = 26;
@@ -653,9 +720,9 @@
             this.flowLayoutPanel11.Controls.Add(this.label27);
             this.flowLayoutPanel11.Controls.Add(this.Faculty_Member_Name_1);
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(207, 4);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(206, 4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(339, 67);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(338, 67);
             this.flowLayoutPanel11.TabIndex = 25;
             // 
             // label27
@@ -684,7 +751,7 @@
             this.flowLayoutPanel12.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(196, 67);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(195, 67);
             this.flowLayoutPanel12.TabIndex = 24;
             // 
             // label28
@@ -712,7 +779,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.47059F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.52941F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 653F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 655F));
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel8, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel7, 0, 0);
@@ -729,7 +796,7 @@
             this.flowLayoutPanel9.Controls.Add(this.label23);
             this.flowLayoutPanel9.Controls.Add(this.Term_Or_Semester);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(350, 4);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(348, 4);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(524, 67);
             this.flowLayoutPanel9.TabIndex = 26;
@@ -759,9 +826,9 @@
             this.flowLayoutPanel8.Controls.Add(this.label22);
             this.flowLayoutPanel8.Controls.Add(this.Department);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(182, 4);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(181, 4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(161, 67);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(160, 67);
             this.flowLayoutPanel8.TabIndex = 25;
             // 
             // label22
@@ -791,7 +858,7 @@
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(171, 67);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(170, 67);
             this.flowLayoutPanel7.TabIndex = 24;
             // 
             // label21
@@ -835,7 +902,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.54369F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.45631F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 738F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 740F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel6, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel4, 0, 1);
@@ -855,9 +922,9 @@
             this.flowLayoutPanel5.Controls.Add(this.label19);
             this.flowLayoutPanel5.Controls.Add(this.Step_One_Date);
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(131, 81);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(130, 81);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(127, 68);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(126, 68);
             this.flowLayoutPanel5.TabIndex = 23;
             // 
             // label19
@@ -885,7 +952,7 @@
             this.flowLayoutPanel6.Controls.Add(this.label20);
             this.flowLayoutPanel6.Controls.Add(this.Course_Name_Number);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(265, 81);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(263, 81);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(628, 68);
             this.flowLayoutPanel6.TabIndex = 23;
@@ -917,7 +984,7 @@
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(4, 81);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(120, 68);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(119, 68);
             this.flowLayoutPanel4.TabIndex = 23;
             // 
             // label18
@@ -945,7 +1012,7 @@
             this.flowLayoutPanel3.Controls.Add(this.label17);
             this.flowLayoutPanel3.Controls.Add(this.Student_Email);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(265, 4);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(263, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(626, 68);
             this.flowLayoutPanel3.TabIndex = 24;
@@ -975,9 +1042,9 @@
             this.flowLayoutPanel2.Controls.Add(this.label16);
             this.flowLayoutPanel2.Controls.Add(this.Student_Number);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(131, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(130, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(127, 68);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(126, 68);
             this.flowLayoutPanel2.TabIndex = 23;
             // 
             // label16
@@ -1007,7 +1074,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(120, 68);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(119, 68);
             this.flowLayoutPanel1.TabIndex = 22;
             // 
             // label15
@@ -1051,7 +1118,7 @@
             this.label14.Location = new System.Drawing.Point(325, 375);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(55, 16);
+            this.label14.Size = new System.Drawing.Size(56, 16);
             this.label14.TabIndex = 41;
             this.label14.Text = "one (1)";
             // 
@@ -1141,7 +1208,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(901, 186);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 16);
+            this.label9.Size = new System.Drawing.Size(72, 16);
             this.label9.TabIndex = 33;
             this.label9.Text = "tru.ca/aic";
             // 
@@ -1151,7 +1218,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(901, 138);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 32);
+            this.label8.Size = new System.Drawing.Size(99, 32);
             this.label8.TabIndex = 32;
             this.label8.Text = "Kamloops, BC, \r\nCanada ";
             // 
@@ -1161,7 +1228,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(901, 170);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 16);
+            this.label7.Size = new System.Drawing.Size(59, 16);
             this.label7.TabIndex = 31;
             this.label7.Text = "V2C 0C8";
             // 
@@ -1171,7 +1238,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(901, 121);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 16);
+            this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 30;
             this.label6.Text = "805 TRU Way";
             // 
@@ -1210,7 +1277,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 16);
+            this.label3.Size = new System.Drawing.Size(245, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "ACADEMIC INTEGRITY POLICY ED 5-0";
             // 
@@ -1734,7 +1801,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.29585F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.70415F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 389F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391F));
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel18, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel19, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.flowLayoutPanel20, 0, 0);
@@ -1751,7 +1818,7 @@
             this.flowLayoutPanel18.Controls.Add(this.label71);
             this.flowLayoutPanel18.Controls.Add(this.Date_Step4);
             this.flowLayoutPanel18.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(607, 4);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(605, 4);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(260, 67);
             this.flowLayoutPanel18.TabIndex = 26;
@@ -1781,9 +1848,9 @@
             this.flowLayoutPanel19.Controls.Add(this.label72);
             this.flowLayoutPanel19.Controls.Add(this.Department_Chair_Name);
             this.flowLayoutPanel19.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(349, 4);
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(348, 4);
             this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(251, 67);
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(250, 67);
             this.flowLayoutPanel19.TabIndex = 25;
             // 
             // label72
@@ -1812,7 +1879,7 @@
             this.flowLayoutPanel20.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel20.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel20.Name = "flowLayoutPanel20";
-            this.flowLayoutPanel20.Size = new System.Drawing.Size(338, 67);
+            this.flowLayoutPanel20.Size = new System.Drawing.Size(337, 67);
             this.flowLayoutPanel20.TabIndex = 24;
             // 
             // label73
@@ -2044,7 +2111,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.29585F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.70415F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 389F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 391F));
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel22, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel23, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel24, 0, 0);
@@ -2061,7 +2128,7 @@
             this.flowLayoutPanel22.Controls.Add(this.label74);
             this.flowLayoutPanel22.Controls.Add(this.Step5_Date);
             this.flowLayoutPanel22.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel22.Location = new System.Drawing.Point(607, 4);
+            this.flowLayoutPanel22.Location = new System.Drawing.Point(605, 4);
             this.flowLayoutPanel22.Name = "flowLayoutPanel22";
             this.flowLayoutPanel22.Size = new System.Drawing.Size(273, 67);
             this.flowLayoutPanel22.TabIndex = 26;
@@ -2091,9 +2158,9 @@
             this.flowLayoutPanel23.Controls.Add(this.label75);
             this.flowLayoutPanel23.Controls.Add(this.Dean_Name);
             this.flowLayoutPanel23.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel23.Location = new System.Drawing.Point(349, 4);
+            this.flowLayoutPanel23.Location = new System.Drawing.Point(348, 4);
             this.flowLayoutPanel23.Name = "flowLayoutPanel23";
-            this.flowLayoutPanel23.Size = new System.Drawing.Size(251, 67);
+            this.flowLayoutPanel23.Size = new System.Drawing.Size(250, 67);
             this.flowLayoutPanel23.TabIndex = 25;
             // 
             // label75
@@ -2122,7 +2189,7 @@
             this.flowLayoutPanel24.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel24.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel24.Name = "flowLayoutPanel24";
-            this.flowLayoutPanel24.Size = new System.Drawing.Size(338, 67);
+            this.flowLayoutPanel24.Size = new System.Drawing.Size(337, 67);
             this.flowLayoutPanel24.TabIndex = 24;
             // 
             // label76
@@ -2420,7 +2487,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.42956F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.57044F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 352F));
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel13, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel16, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel17, 0, 0);
@@ -2437,7 +2504,7 @@
             this.flowLayoutPanel13.Controls.Add(this.label58);
             this.flowLayoutPanel13.Controls.Add(this.Date_Step3);
             this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(676, 4);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(674, 4);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
             this.flowLayoutPanel13.Size = new System.Drawing.Size(221, 67);
             this.flowLayoutPanel13.TabIndex = 26;
@@ -2467,7 +2534,7 @@
             this.flowLayoutPanel16.Controls.Add(this.label59);
             this.flowLayoutPanel16.Controls.Add(this.Faculty_Member_Name_2);
             this.flowLayoutPanel16.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(397, 4);
+            this.flowLayoutPanel16.Location = new System.Drawing.Point(395, 4);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
             this.flowLayoutPanel16.Size = new System.Drawing.Size(272, 67);
             this.flowLayoutPanel16.TabIndex = 25;
@@ -2498,7 +2565,7 @@
             this.flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel17.Location = new System.Drawing.Point(4, 4);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
-            this.flowLayoutPanel17.Size = new System.Drawing.Size(386, 67);
+            this.flowLayoutPanel17.Size = new System.Drawing.Size(384, 67);
             this.flowLayoutPanel17.TabIndex = 24;
             // 
             // label60
@@ -2632,6 +2699,7 @@
             this.button11.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.button11.FlatAppearance.BorderSize = 2;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button11.Location = new System.Drawing.Point(0, 1);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(49, 33);
@@ -2790,73 +2858,6 @@
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ToolTipText = "id";
-            // 
-            // studentNameDataGridViewTextBoxColumn
-            // 
-            this.studentNameDataGridViewTextBoxColumn.DataPropertyName = "Student_Name";
-            this.studentNameDataGridViewTextBoxColumn.HeaderText = "Student Name";
-            this.studentNameDataGridViewTextBoxColumn.Name = "studentNameDataGridViewTextBoxColumn";
-            this.studentNameDataGridViewTextBoxColumn.ToolTipText = "Student Name";
-            // 
-            // studentNumberDataGridViewTextBoxColumn
-            // 
-            this.studentNumberDataGridViewTextBoxColumn.DataPropertyName = "Student_Number";
-            this.studentNumberDataGridViewTextBoxColumn.HeaderText = "Student Number";
-            this.studentNumberDataGridViewTextBoxColumn.Name = "studentNumberDataGridViewTextBoxColumn";
-            this.studentNumberDataGridViewTextBoxColumn.ToolTipText = "Student Number";
-            // 
-            // studentEmailDataGridViewTextBoxColumn
-            // 
-            this.studentEmailDataGridViewTextBoxColumn.DataPropertyName = "Student_Email";
-            this.studentEmailDataGridViewTextBoxColumn.HeaderText = "Student Email";
-            this.studentEmailDataGridViewTextBoxColumn.Name = "studentEmailDataGridViewTextBoxColumn";
-            this.studentEmailDataGridViewTextBoxColumn.ToolTipText = "Student Email";
-            // 
-            // courseNameNumberDataGridViewTextBoxColumn
-            // 
-            this.courseNameNumberDataGridViewTextBoxColumn.DataPropertyName = "Course_Name_Number";
-            this.courseNameNumberDataGridViewTextBoxColumn.HeaderText = "Course Name Number";
-            this.courseNameNumberDataGridViewTextBoxColumn.Name = "courseNameNumberDataGridViewTextBoxColumn";
-            this.courseNameNumberDataGridViewTextBoxColumn.ToolTipText = "Course Name Number";
-            // 
-            // departmentDataGridViewTextBoxColumn
-            // 
-            this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
-            this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
-            this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
-            this.departmentDataGridViewTextBoxColumn.ToolTipText = "Department";
-            // 
-            // termOrSemesterDataGridViewTextBoxColumn
-            // 
-            this.termOrSemesterDataGridViewTextBoxColumn.DataPropertyName = "Term_Or_Semester";
-            this.termOrSemesterDataGridViewTextBoxColumn.HeaderText = "Term Or Semester";
-            this.termOrSemesterDataGridViewTextBoxColumn.Name = "termOrSemesterDataGridViewTextBoxColumn";
-            this.termOrSemesterDataGridViewTextBoxColumn.ToolTipText = "Term Or Semester";
-            // 
-            // descriptionViolationDataGridViewTextBoxColumn
-            // 
-            this.descriptionViolationDataGridViewTextBoxColumn.DataPropertyName = "Description_Violation";
-            this.descriptionViolationDataGridViewTextBoxColumn.HeaderText = "Description Violation";
-            this.descriptionViolationDataGridViewTextBoxColumn.Name = "descriptionViolationDataGridViewTextBoxColumn";
-            this.descriptionViolationDataGridViewTextBoxColumn.ToolTipText = "Description Violation";
-            // 
-            // facultyMemberNameDataGridViewTextBoxColumn
-            // 
-            this.facultyMemberNameDataGridViewTextBoxColumn.DataPropertyName = "Faculty_Member_Name";
-            this.facultyMemberNameDataGridViewTextBoxColumn.HeaderText = "Faculty Member Name";
-            this.facultyMemberNameDataGridViewTextBoxColumn.Name = "facultyMemberNameDataGridViewTextBoxColumn";
-            this.facultyMemberNameDataGridViewTextBoxColumn.ToolTipText = "Faculty Member Name";
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(Project.Student);
-            // 
             // Pages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2883,6 +2884,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel0.ResumeLayout(false);
             this.panel0.PerformLayout();
@@ -2958,7 +2960,6 @@
             this.flowLayoutPanel17.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,6 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(415, 452);
             this.label1.TabIndex = 0;
+            
             // 
             // pictureBox1
             // 
@@ -122,7 +123,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(281, 185);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 16);
+            this.label5.Size = new System.Drawing.Size(21, 16);
             this.label5.TabIndex = 35;
             this.label5.Text = "ID";
             // 
@@ -133,7 +134,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(281, 249);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 16);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 36;
             this.label6.Text = "Password";
             // 
